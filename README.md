@@ -4,14 +4,14 @@
 ### Founder, BluePatterns AI ⚡ AI-Native Systems & Multi-Agent Architecture
 
 <p align="center">
-  <a href="https://linkedin.com/in/<YOUR-LINKEDIN>"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:<YOUR-EMAIL>"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://twitter.com/<YOUR-TWITTER>"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter" /></a>
-  <a href="https://<YOUR-WEBSITE>"><img src="https://img.shields.io/badge/Website-007ACC?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website" /></a>
+  <a href="https://linkedin.com/in/sandeep-hipparagi"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:hipparagi95@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://twitter.com/hipparagi_here"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter" /></a>
+  <a href="https://bluepatterns.ai/"><img src="https://img.shields.io/badge/Website-007ACC?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website" /></a>
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=<YOUR-GITHUB-USERNAME>&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=Sandeep-Hipparagi&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" />
 </p>
 
 </div>
