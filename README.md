@@ -2,133 +2,188 @@
 
 # Sandeep Hipparagi
 ### Founder, BluePatterns AI
-### AI-Native Systems • Multi-Agent Architecture • Enterprise LLM Product Design
+### Building AI-Native Systems • Multi-Agent Architecture • Enterprise LLM Products
 
-<p align="center">
-  <a href="https://linkedin.com/in/sandeep-hipparagi"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:hipparagi95@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://twitter.com/hipparagi_here"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter" /></a>
-  <a href="https://bluepatterns.ai/"><img src="https://img.shields.io/badge/Website-007ACC?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website" /></a>
-</p>
+<br/>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Sandeep-Hipparagi&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" />
-</p>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/sandeep-hipparagi)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hipparagi95@gmail.com)
+[![Twitter](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/hipparagi_here)
+[![Website](https://img.shields.io/badge/Website-007ACC?style=for-the-badge&logo=google-chrome&logoColor=white)](https://bluepatterns.ai/)
+[![BluePatterns AI](https://img.shields.io/badge/BluePatterns-AI%20Native-FF6B35?style=for-the-badge)](https://bluepatterns.ai/)
+
+<br/>
+
+![Profile Views](https://komarev.com/ghpvc/?username=Sandeep-Hipparagi&label=Profile%20Views&color=0e75b6&style=flat)
 
 </div>
 
 ---
 
-## 👨‍💻 Executive Summary
-I build AI-native systems that turn large language models into dependable business tools. At BluePatterns AI, I focus on architecting agentic workflows, routing layers, inference adaptation, and production-grade AI systems for enterprise use.
+## 🎯 Executive Summary
 
-My work sits at the intersection of:
-- AI system design and architecture
-- Multi-agent orchestration and dispatch
-- Domain-specific reasoning layers
-- Prompt optimization and context engineering
-- Evaluation, guardrails, and reliability systems
-- Production-ready LLM deployment
+I design and architect **production-grade AI systems** that turn large language models into reliable business tools. At **BluePatterns AI**, I focus on the foundational layers that make AI work at scale: agent routing, inference adaptation, reasoning layers, and guardrails.
+
+The gap in most AI products isn't raw model capability — it's the **architecture around the model**. That's where I work.
 
 ---
 
-## 🎯 What I Do
-I help teams move from experimentation to real-world AI systems by designing the infrastructure and reasoning layers behind production AI products.
+## 🧠 Core Focus Areas
 
-### Core focus areas
-- Multi-agent routing and orchestration
-- Agent memory, state management, and workflow orchestration
-- LLM evaluation and benchmarking harnesses
-- Guardrails, policy enforcement, and safety layer design
-- RAG, domain adaptation, and grounded reasoning systems
-- Enterprise AI product architecture for legal, fintech, and cyber domains
-- Prompt compilation and context optimization for high-reliability outputs
+```
+┌─────────────────────────────────────────────────────────────┐
+│ ENTERPRISE AI ARCHITECTURE                                  │
+├─────────────────────────────────────────────────────────────┤
+│                                                               │
+│  Multi-Agent Routing & Dispatch                             │
+│  ├─ Dynamic task classification                             │
+│  ├─ Stateful mediation and workflow orchestration           │
+│  └─ Real-time agent selection and load balancing            │
+│                                                               │
+│  Inference & Reasoning Layers                               │
+│  ├─ Domain-specific logic and decision trees                │
+│  ├─ Context adaptation and grounding                        │
+│  └─ Specialized inference for legal, fintech, cyber         │
+│                                                               │
+│  Guardrails & Reliability                                   │
+│  ├─ Dynamic guardrail refactoring                           │
+│  ├─ Policy enforcement and safety layers                    │
+│  └─ Evaluation harnesses and benchmarking                   │
+│                                                               │
+│  Prompt Engineering & Optimization                          │
+│  ├─ Structural prompt metaprogramming                       │
+│  ├─ Context distillation and compression                    │
+│  └─ Self-refining templates and ideation                    │
+│                                                               │
+└─────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## 🧠 Core Competencies
-- AI product strategy and architecture
-- Multi-agent systems design
-- Prompt engineering and metaprogramming
-- Inference layer abstraction and modular model adaptation
-- Guardrail design and evaluation loops
-- Enterprise AI deployment patterns
-- Legal-tech, fintech, and cybersecurity AI applications
+## 🛠️ Tech Stack & Capabilities
 
----
-
-## 🛠️ Technology Stack
-
+### Core Technologies
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=py,ts,fastapi,docker,git,github,gcp,postgres,redis,linux,langchain,openai,aws" />
+  <img src="https://skillicons.dev/icons?i=py,ts,fastapi,docker,git,github,gcp,postgres,redis,linux" alt="Core Tech" />
 </p>
 
-### Frameworks, tooling & platforms
+**Languages & Frameworks:**
 - Python, TypeScript, FastAPI
-- Docker, Git, GitHub, Linux
-- Google Cloud Platform, PostgreSQL, Redis
 - LangChain, LlamaIndex, OpenAI APIs, Google AI Studio
-- Ignite Platform, enterprise AI orchestration stacks
+- Ignite Platform, custom orchestration layers
 
-### AI systems and engineering disciplines
-- Multi-agent routing
-- Context adaptation and prompt optimization
-- Guardrails and reliability checks
-- Evaluation harnesses and benchmarking
-- Domain-specific inference logic
-- Structured reasoning pipelines
+**Infrastructure & Ops:**
+- Docker, Kubernetes, Git, GitHub
+- Google Cloud Platform (GCP), PostgreSQL, Redis
+- Linux, system design, microservices architecture
 
----
-
-## 🚀 Flagship Systems & Research Themes
-
-| System / Model | Focus | Status |
-| :--- | :--- | :--- |
-| **Aware.ai** | Multi-agent routing engine with dynamic guardrail refactoring and stateful mediation | Core Engine |
-| **A3H Harness** | Evaluation, benchmarking, and stress-testing platform for LLM and agent reliability | Testing & Eval |
-| **Awareness Augmentation Layer** | Legal inference layer for grounded reasoning and decision-support workflows | Inference Engine |
-| **Adapter Layer** | Middleware abstraction separating task logic from model-specific execution | Middleware |
-| **Wisdom Model** | Context distillation and higher-order reasoning abstraction | Architecture |
-| **PromptCraft / Brainstorm Model** | Structured prompt generation, self-refining templates, and ideation pipelines | Tooling |
+**AI Systems & Specializations:**
+- Multi-agent routing and orchestration
+- Prompt compilation and metaprogramming
+- Context adaptation and inference abstraction
+- Evaluation frameworks and benchmarking
+- Legal, fintech, and cybersecurity domains
 
 ---
 
-## 💼 Selected Work & Product Experience
+## 🚀 Core Systems (BluePatterns AI)
 
-- **Paytm Vyapar Copilot** — Designed an enterprise conversational copilot on the Ignite platform to help merchants streamline operations and workflows.
-- **Nyaya Rakshak (Sarvam Buildathon)** — Built a sovereign, vernacular legal intelligence agent and integrated the **Forge QA Agent** to address domain-specific AIVAR challenges.
-- **SwitchBoard AI (Track A & Track B)** — Developed modular dispatch and routing systems for real-time agent classification and API orchestration.
-- **CyberSaarthi** — Built a citizen safety and advisory system for cyber awareness with an AI-powered knowledge layer.
-- **CyberCrime Intelligence** — Designed rapid forensic and analytical workflows using Google AI Studio and structured intelligence pipelines.
-- **Roognis AI** — Delivered prompt engineering and model pipeline consulting for collaborative AI product development.
+| System | Purpose | Status |
+|:---|:---|:---|
+| **Aware.ai** | Multi-agent routing engine with dynamic guardrail refactoring and stateful task mediation | Production Engine |
+| **A3H Harness** | Evaluation, stress-testing, and reliability benchmarking for LLM and agent systems | Testing & Evaluation |
+| **Awareness Augmentation** | Specialized legal inference layer with domain-specific decision trees and grounding | Inference Engine |
+| **Adapter Layer** | Middleware abstraction decoupling task inputs from model-specific inference logic | Orchestration |
+| **Wisdom Model** | Context distillation and higher-order reasoning abstraction layer | Architecture |
+| **PromptCraft** | Structured prompt generation, self-refining templates, and AI ideation pipelines | Tooling |
 
 ---
 
-## 📊 GitHub Activity
+## 💼 Selected Product & Research Work
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Sandeep-Hipparagi&show_icons=true&theme=radical&rank_icon=github" alt="Sandeep's GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sandeep-Hipparagi&layout=compact&theme=radical" alt="Top Languages" />
-</p>
+### Enterprise AI Applications
+- **Paytm Vyapar Copilot** — Enterprise conversational agent on Ignite platform streamlining merchant operations at scale
+- **Nyaya Rakshak (Sarvam Buildathon)** — Sovereign legal intelligence system with vernacular language support and AIVAR problem-solving integration
+- **SwitchBoard AI** — Modular dispatch and real-time agent routing for multi-track task classification and orchestration
+
+### Safety & Intelligence Systems
+- **CyberSaarthi** — Citizen advisory and cyber safety system with AI-powered threat awareness and guidance
+- **CyberCrime Intelligence** — Rapid forensic analytics pipeline and intelligence workflow built on Google AI Studio
+
+### AI Engineering & Consulting
+- **Roognis AI** — Specialized consulting for prompt engineering, model pipeline design, and production AI delivery
+- **/brag** — Agent skill for generating launch videos and shareable content with music, motion, and narrative automation
+
+---
+
+## 📊 GitHub Activity & Growth
+
+<div align="center">
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Sandeep-Hipparagi&show_icons=true&theme=radical&rank_icon=github)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Sandeep-Hipparagi&layout=compact&theme=radical)
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Sandeep-Hipparagi&theme=radical)
+
+</div>
 
 ---
 
 ## 🔍 Why This Matters
-I focus on building AI systems that are not just intelligent, but operationally reliable. The biggest gap in many AI products is not raw model capability — it is the architecture around the model: routing, grounding, evaluation, guardrails, and system integration.
 
-That is where I work.
+Most AI companies focus on building better models. I focus on building better **systems around models**.
+
+The real bottleneck in production AI isn't intelligence — it's:
+- **Routing & dispatch** — Getting tasks to the right agent
+- **Reasoning layers** — Injecting domain logic where models need guidance
+- **Guardrails & reliability** — Making sure the system doesn't fail in production
+- **Evaluation & iteration** — Knowing when your system is working
+- **Context & adaptation** — Handling real-world messy data
+
+This is where the competitive advantage lies. And it's where I build.
 
 ---
 
-## 🤝 Open to
-- Strategic AI partnerships
-- Architecture consultations
-- Enterprise LLM product development
-- AI agent and orchestration design
-- Research collaborations in legal-tech, fintech, and safety-focused AI
+## 🤝 Open For
+
+- **Strategic AI Partnerships** — Building the next generation of reliable AI systems
+- **Architecture Consultations** — Designing multi-agent and enterprise AI solutions
+- **Enterprise LLM Products** — From legal-tech to fintech to cyber safety
+- **Research Collaborations** — Prompt engineering, evaluation, and reasoning systems
+- **Team Building** — Building AI engineering teams focused on production-grade systems
+
+---
+
+## 📍 Areas of Expertise
+
+| Domain | Depth | Recent Work |
+|:---|:---|:---|
+| **Multi-Agent Systems** | ⭐⭐⭐⭐⭐ | Aware.ai routing engine, SwitchBoard AI |
+| **LLM Evaluation** | ⭐⭐⭐⭐⭐ | A3H Harness, benchmark frameworks |
+| **Prompt Engineering** | ⭐⭐⭐⭐⭐ | PromptCraft, metaprogramming, context distillation |
+| **Legal-Tech AI** | ⭐⭐⭐⭐ | Nyaya Rakshak, legal inference layers |
+| **Fintech AI** | ⭐⭐⭐⭐ | Enterprise risk and decision support systems |
+| **Cybersecurity AI** | ⭐⭐⭐⭐ | CyberSaarthi, threat intelligence pipelines |
+| **System Architecture** | ⭐⭐⭐⭐⭐ | Adapter layers, middleware, orchestration |
+| **Inference Optimization** | ⭐⭐⭐⭐ | Context adaptation, model abstraction |
+
+---
+
+## 📚 What I'm Focused On Right Now
+
+- Scaling BluePatterns AI's core routing and inference engines
+- Building next-generation evaluation harnesses for multi-agent systems
+- Exploring specialized reasoning layers for domain-specific AI applications
+- Advancing sovereign and vernacular AI capabilities
+- Enterprise LLM deployment patterns and best practices
 
 ---
 
 <div align="center">
-  <sub>Building systems that make AI useful, trustworthy, and production-ready.</sub>
+
+### Building systems that make AI useful, trustworthy, and production-ready.
+
+**[BluePatterns AI](https://bluepatterns.ai/) • [LinkedIn](https://linkedin.com/in/sandeep-hipparagi) • [Twitter](https://twitter.com/hipparagi_here) • [Email](mailto:hipparagi95@gmail.com)**
+
 </div>
