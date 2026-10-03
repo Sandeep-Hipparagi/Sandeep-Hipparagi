@@ -5,6 +5,7 @@
 ### Multi-Agent Systems • Self-Healing Architectures • Production LLM Infrastructure
 
 <p align="center">
+  <a href="https://sandeep-hipparagi.github.io/Sandeep-Hipparagi/"><img src="https://img.shields.io/badge/Live%20Launchpad-FF7B54?style=for-the-badge&logo=rocket&logoColor=white" alt="Live Launchpad" /></a>
   <a href="https://linkedin.com/in/sandeephipparagi"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="https://github.com/Sandeep-Hipparagi"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="https://huggingface.co/Sandeep4235"><img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face" /></a>
