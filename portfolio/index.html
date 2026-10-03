@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sandeep Hipparagi — AI Systems & Research Portfolio</title>
+  <meta name="description" content="AI/ML Developer & Researcher. Multi-Agent Systems, Self-Healing Architectures, and Production LLM Infrastructure. Founder of BluePatterns AI." />
+  <meta name="theme-color" content="#e26a3a" />
+  <meta property="og:title" content="Sandeep Hipparagi — Production AI Architect & Researcher" />
+  <meta property="og:description" content="The real advantage in AI is not just the model. It is the architecture around it." />
+  <meta property="og:type" content="website" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;900&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">skip to content</a>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <header class="hero">
+    <div class="topbar">
+      <div class="topbar-left">
+        <span class="mark"><span class="slash">/</span>sandeep-hipparagi</span>
+        <span class="status-pill"><span class="pulse-dot"></span> Founder @ BluePatterns AI</span>
+      </div>
+      <nav aria-label="primary">
+        <a href="#models">models</a>
+        <a href="#systems">systems</a>
+        <a href="#simulator">tracer</a>
+        <a href="#research">research</a>
+        <a href="#experience">experience</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">resume</a>
+      </nav>
+      <div class="topbar-actions">
+        <a class="icon-btn" href="https://github.com/Sandeep-Hipparagi" target="_blank" rel="noopener" aria-label="GitHub Profile" title="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://linkedin.com/in/sandeephipparagi" target="_blank" rel="noopener" aria-label="LinkedIn Profile" title="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://huggingface.co/Sandeep4235" target="_blank" rel="noopener" aria-label="Hugging Face Models" title="Hugging Face">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5v-3c0-.28.22-.5.5-.5s.5.22.5.5v3zm-4-3c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5zm6 0c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Main -->
+    <div class="hero-main">
+      <div class="hero-body">
+        <p class="hero-tagline"><span>⚡</span> multi-agent architecture · self-healing runtimes</p>
+        <h1 class="hero-headline">i build the systems<br/>behind <span class="emph">production ai.</span></h1>
+        <p class="hero-sub">The routing, state persistence, orchestration, and evaluation layers that transform LLMs into <strong>reliable enterprise software</strong>.</p>
+      </div>
+
+      <!-- Hero Interactive Tracer Card -->
+      <aside class="hero-sim-card" id="simulator" aria-label="Interactive State Graph Simulator">
+        <div class="sim-header">
+          <div class="sim-dots">
+            <span class="sim-dot red"></span>
+            <span class="sim-dot yellow"></span>
+            <span class="sim-dot green"></span>
+          </div>
+          <span class="sim-title">aware.ai / runtime-tracer</span>
+          <button id="sim-audio-toggle" class="sim-audio-btn" type="button" aria-pressed="true">
+            <span>🔊</span> <span class="audio-label">sfx: on</span>
+          </button>
+        </div>
+
+        <div class="sim-screen">
+          <div class="sim-query-box">
+            <span class="sim-query-label">Ingested Intent</span>
+            <span class="sim-query-text">"Legal Statutory Audit (BNS-2023)"</span>
+          </div>
+
+          <div class="sim-graph">
+            <div class="sim-step" data-step-num="1" data-state="idle">
+              <span class="step-indicator">1</span>
+              <div class="step-details">
+                <div class="step-name"><span>Gateway Ingestion</span> <span class="step-metric">FastAPI (1.8ms)</span></div>
+                <div class="step-desc">Token auth validated & request decrypted</div>
+              </div>
+            </div>
+
+            <div class="sim-step" data-step-num="2" data-state="idle">
+              <span class="step-indicator">2</span>
+              <div class="step-details">
+                <div class="step-name"><span>Guardrail Filtering</span> <span class="step-metric">OWASP Pass</span></div>
+                <div class="step-desc">PII scrubbed & prompt injection checks clean</div>
+              </div>
+            </div>
+
+            <div class="sim-step" data-step-num="3" data-state="idle">
+              <span class="step-indicator">3</span>
+              <div class="step-details">
+                <div class="step-name"><span>Model Routing</span> <span class="step-metric">Llama3-8b-Wisdom</span></div>
+                <div class="step-desc">3-Stage context pipe (Instruction → Thought → Resp)</div>
+              </div>
+            </div>
+
+            <div class="sim-step" data-step-num="4" data-state="idle">
+              <span class="step-indicator">4</span>
+              <div class="step-details">
+                <div class="step-name"><span>Agent Tool Execution</span> <span class="step-metric">Redis State</span></div>
+                <div class="step-desc">Deterministic state graph invocation & memory sync</div>
+              </div>
+            </div>
+
+            <div class="sim-step" data-step-num="5" data-state="idle">
+              <span class="step-indicator">5</span>
+              <div class="step-details">
+                <div class="step-name"><span>Self-Healing Loop</span> <span class="step-metric">Healer Agent</span></div>
+                <div class="step-desc">Automated schema repair & retry idempotency</div>
+              </div>
+            </div>
+
+            <div class="sim-step" data-step-num="6" data-state="idle">
+              <span class="step-indicator">6</span>
+              <div class="step-details">
+                <div class="step-name"><span>Production Delivery</span> <span class="step-metric">200 OK</span></div>
+                <div class="step-desc">Structured JSON payload verified & emitted</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sim-controls">
+            <button id="sim-run-btn" class="sim-trigger-btn" type="button">▶ Run Normal Trace</button>
+            <button id="sim-fail-btn" class="sim-trigger-btn" style="background: #e28743;" type="button">⚡ Test Fail & Self-Heal</button>
+            <button id="sim-reset-btn" class="sim-reset-btn" type="button">↺ Reset</button>
+          </div>
+          <div style="font-size: 10px; color: var(--dark-ink-dim); text-align: center;">Status: <span id="sim-status-text" style="color: var(--dark-accent);">ready</span></div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Hero Footer -->
+    <div class="hero-foot">
+      <div class="install-stack">
+        <span class="install-label">open-source model · run on CPU or GPU via Ollama</span>
+        <pre class="install" aria-label="Run Wisdom Model command"><span class="copy-wrap"><button class="copy" type="button" data-copy="ollama run Sandeep4235/llama3-8b-Wisdom">copy</button></span><code><span class="prompt">$</span> ollama run Sandeep4235/llama3-8b-Wisdom</code></pre>
+        <span class="install-label">graph-driven orchestration switchboard</span>
+        <pre class="install" aria-label="Clone Switchboard command"><span class="copy-wrap"><button class="copy" type="button" data-copy="git clone https://github.com/Sandeep-Hipparagi/Universal-AI-Switchboard">copy</button></span><code><span class="prompt">$</span> git clone https://github.com/Sandeep-Hipparagi/Universal-AI-Switchboard</code></pre>
+      </div>
+
+      <aside class="hlb-card">
+        <h2 class="hlb-title">The Engineering <em>Philosophy</em></h2>
+        <p class="hlb-copy">The real advantage in enterprise AI is not just the model weights. It is the architecture around them: routing, verification, and deterministic error loops.</p>
+        <ul class="hlb-facts">
+          <li>Zero-downtime routing</li>
+          <li>Self-healing state graphs</li>
+          <li>Governed HitL checkpoints</li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MAIN SECTIONS
+       ============================================================ -->
+  <main id="main">
+
+    <!-- SECTION 1: OPEN-SOURCE MODELS & GGUFS -->
+    <section class="section" id="models" aria-labelledby="models-title">
+      <div class="section-head">
+        <div>
+          <p class="section-eyebrow">fine-tuned weights · low-latency quantization</p>
+          <h2 class="section-title" id="models-title">open-source <em>models.</em></h2>
+        </div>
+        <p class="section-desc">Custom weights fine-tuned with Unsloth QLoRA, engineered with structured reasoning pipelines and distributed as multi-format GGUFs for CPU/GPU inference.</p>
+      </div>
+
+      <div class="spotlight-grid">
+        <!-- Model 1 -->
+        <article class="spotlight-card">
+          <div class="card-top">
+            <span class="card-cmd">llama3-8b-Wisdom</span>
+            <span class="card-badge">Hugging Face • GGUF</span>
+          </div>
+          <p class="card-summary">Fine-tuned Llama-3 8B using Unsloth QLoRA on a curated philosophical corpus. Features a strict 3-stage prompt architecture (<strong>Instruction → Thought → Response</strong>) to completely prevent conversational drift and hallucination.</p>
+          
+          <div class="tech-pills">
+            <span class="tech-pill">Unsloth QLoRA</span>
+            <span class="tech-pill">GGUF (Q4_K_M, Q5_K_M, Q8_0)</span>
+            <span class="tech-pill">llama.cpp</span>
+            <span class="tech-pill">Model Card Governance</span>
+          </div>
+
+          <div class="install-stack card-install">
+            <span class="install-label">hugging face release</span>
+            <pre class="install"><span class="copy-wrap"><button class="copy" type="button" data-copy="git clone https://huggingface.co/Sandeep4235/llama3-8b-Wisdom">copy</button></span><code><span class="prompt">$</span> git clone https://huggingface.co/Sandeep4235/llama3-8b-Wisdom</code></pre>
+          </div>
+        </article>
+
+        <!-- Model 2 -->
+        <article class="spotlight-card">
+          <div class="card-top">
+            <span class="card-cmd">Qwen3-4B-PromptCraft</span>
+            <span class="card-badge">Apache 2.0 • Zero-Reasoning</span>
+          </div>
+          <p class="card-summary">Zero-reasoning prompt engineering model fine-tuned on thousands of synthetic instruction pairs. Specifically suppresses internal reasoning tokens to output deterministic, production-ready system prompts with built-in OWASP security mitigations.</p>
+          
+          <div class="tech-pills">
+            <span class="tech-pill">Qwen3 Fine-Tune</span>
+            <span class="tech-pill">OWASP LLM Top 10</span>
+            <span class="tech-pill">Token Suppression</span>
+            <span class="tech-pill">Transformers Runtime</span>
+          </div>
+
+          <div class="install-stack card-install">
+            <span class="install-label">hugging face release</span>
+            <pre class="install"><span class="copy-wrap"><button class="copy" type="button" data-copy="git clone https://huggingface.co/Sandeep4235/Qwen3-4B-PromptCraft">copy</button></span><code><span class="prompt">$</span> git clone https://huggingface.co/Sandeep4235/Qwen3-4B-PromptCraft</code></pre>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PRODUCTION SYSTEMS & MULTI-AGENT GALLERY -->
+    <section class="section" id="systems" aria-labelledby="systems-title">
+      <div class="section-head">
+        <div>
+          <p class="section-eyebrow">eight systems · multi-agent coordination</p>
+          <h2 class="section-title" id="systems-title">what production <em>systems</em> look like.</h2>
+        </div>
+        <p class="section-desc">Click any card to inspect its architecture, state persistence model, and guardrails.</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn" type="button" data-filter="all" data-active="true">All Systems</button>
+        <button class="filter-btn" type="button" data-filter="orchestration">Multi-Agent & Routing</button>
+        <button class="filter-btn" type="button" data-filter="legal">Legal & GovTech</button>
+        <button class="filter-btn" type="button" data-filter="evals">Testing & Evals</button>
+      </div>
+
+      <!-- Gallery Bento Grid -->
+      <div class="gallery-grid">
+        <!-- System 1 -->
+        <article class="gallery-card" data-category="orchestration">
+          <div class="card-header-row">
+            <span class="card-number">01</span>
+            <span class="card-cat">Routing Engine</span>
+          </div>
+          <h3 class="card-title">Aware.ai</h3>
+          <p class="card-desc">Dual-plane local-first inference router with Redis state persistence, dynamic PII detection, and automated agent health checks in a Docker monorepo.</p>
+          <ul class="card-features">
+            <li>FastAPI + Ollama dual plane</li>
+            <li>In-flight PII masking</li>
+            <li>Tunable privacy levels</li>
+          </ul>
+          <div class="card-footer">
+            <button class="card-link" type="button" data-inspect="aware">Inspect Architecture →</button>
+            <span style="color: var(--dark-ink-dim);">Docker / Redis</span>
+          </div>
+        </article>
+
+        <!-- System 2 -->
+        <article class="gallery-card" data-category="orchestration">
+          <div class="card-header-row">
+            <span class="card-number">02</span>
+            <span class="card-cat">MCP Swappable</span>
+          </div>
+          <h3 class="card-title">Universal AI Switchboard</h3>
+          <p class="card-desc">Decoupled generative AI architecture connected via Model Context Protocol (MCP). Replaces models and tools with zero code rewrites.</p>
+          <ul class="card-features">
+            <li>Lego bricks over MCP</li>
+            <li>Self-healing state loops</li>
+            <li>Mandatory HitL safety gates</li>
+          </ul>
+          <div class="card-footer">
+            <button class="card-link" type="button" data-inspect="switchboard">Inspect Architecture →</button>
+            <span style="color: var(--dark-ink-dim);">LangGraph / MCP</span>
+          </div>
+        </article>
+
+        <!-- System 3 -->
+        <article class="gallery-card" data-category="evals">
+          <div class="card-header-row">
+            <span class="card-number">03</span>
+            <span class="card-cat">Autonomous QA</span>
+          </div>
+          <h3 class="card-title">QA Meta-Agent</h3>
+          <p class="card-desc">Autonomous test engineering agent accepting a single URL and coordinating Planner, Generator, and Healer sub-agents without human intervention.</p>
+          <ul class="card-features">
+            <li>Deterministic state graph</li>
+            <li>Automated test repair</li>
+            <li>Coverage gate verification</li>
+          </ul>
+          <div class="card-footer">
+            <button class="card-link" type="button" data-inspect="qa-agent">Inspect Architecture →</button>
+            <span style="color: var(--dark-ink-dim);">OpenClaw / State</span>
+          </div>
+        </article>
+
+        <!-- System 4 -->
+        <article class="gallery-card" data-category="legal">
+          <div class="card-header-row">
+            <span class="card-number">04</span>
+            <span class="card-cat">Legal GovTech</span>
+          </div>
+          <h3 class="card-title">NyayaRakshak</h3>
+          <p class="card-desc">Sovereign legal complaint auditor using Sarvam AI (Aarya, Akshar) validating complaints against the <strong>Bharatiya Nyaya Sanhita 2023</strong>.</p>
+          <ul class="card-features">
+            <li>Cloud Run multi-stage pipe</li>
+            <li>Document OCR extraction</li>
+            <li>Procedural defect reporter</li>
+          </ul>
+          <div class="card-footer">
+            <button class="card-link" type="button" data-inspect="nyayarakshak">Inspect Architecture →</button>
+            <span style="color: var(--dark-ink-dim);">Sarvam AI / GCP</span>
+          </div>
+        </article>
+
+        <!-- System 5 -->
+        <article class="gallery-card" data-category="legal">
+          <div class="card-header-row">
+            <span class="card-number">05</span>
+            <span class="card-cat">Indic Voice</span>
+          </div>
+          <h3 class="card-title">CyberGuard 1930</h3>
+          <p class="card-desc">Voice-first financial fraud reporting portal supporting Indic vernacular languages via Sarvam AI, reducing fraud response times for senior citizens.</p>
+          <ul class="card-features">
+            <li>Multilingual voice interface</li>
+            <li>APK scam pattern analysis</li>
+            <li>Evidence hash validation</li>
+          </ul>
+          <div class="card-footer">
+            <button class="card-link" type="button" data-inspect="cyberguard">Inspect Architecture →</button>
+            <span style="color: var(--dark-ink-dim);">TypeScript / Voice</span>
+          </div>
+        </article>
+
+        <!-- System 6 -->
+        <article class="gallery-card" data-category="evals">
+          <div class="card-header-row">
+            <span class="card-number">06</span>
+            <span class="card-cat">Education AI</span>
+          </div>
+          <h3 class="card-title">EduTech AI Tutor</h3>
+          <p class="card-desc">Role-based learning portal grounded in real NCERT textbooks. Generates educational diagrams and alerts educators to struggling students in real time.</p>
+          <ul class="card-features">
+            <li>Grounded in textbook data</li>
+            <li>Student/Teacher/Parent portals</li>
+            <li>Live engagement analytics</li>
+          </ul>
+          <div class="card-footer">
+            <button class="card-link" type="button" data-inspect="edutech">Inspect Architecture →</button>
+            <span style="color: var(--dark-ink-dim);">Python / RAG</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 3: RESEARCH & ACADEMIC BACKGROUND -->
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="section-head">
+        <div>
+          <p class="section-eyebrow">ieee publication · academic pedigree</p>
+          <h2 class="section-title" id="research-title">research & <em>theory.</em></h2>
+        </div>
+        <p class="section-desc">Bridging rigorous theoretical foundations with modern production scale.</p>
+      </div>
+
+      <div class="research-container">
+        <div class="paper-card">
+          <span class="paper-badge">✓ IEEE Published</span>
+          <h3 class="paper-title">Artist Based Video Recommendation System using Machine Learning</h3>
+          <p class="paper-abstract">Designed and evaluated machine learning recommendation pipelines utilizing collaborative filtering and semantic content clustering to deliver personalized multimedia discovery with minimal latency.</p>
+          
+          <div style="border-top: 1px solid var(--dark-rule); padding-top: 16px; margin-top: 8px;">
+            <p style="font-family: 'Geist Mono', monospace; font-size: 11px; text-transform: uppercase; color: var(--dark-accent); margin: 0 0 6px 0;">Active Research Vectors</p>
+            <p style="font-size: 13px; color: var(--dark-ink-soft); margin: 0; line-height: 1.6;">
+              • Mitigating information inequality in widespread commercial AI dominance<br/>
+              • Developing localization and vernacular reasoning frameworks for open-weight LLMs<br/>
+              • Multi-agent coordination paradigms and self-healing state graph runtimes
+            </p>
+          </div>
+        </div>
+
+        <div class="academic-sidebar">
+          <div class="academic-card">
+            <h4>Master's Degree (M.Tech)</h4>
+            <p>Amrita Vishwa Vidyapeetham, Coimbatore</p>
+            <span class="score">CGPA: 8.25 / 10.0</span>
+          </div>
+          <div class="academic-card">
+            <h4>Bachelor's Degree (B.E.)</h4>
+            <p>KLE Institute of Technology, Hubli (VTU)</p>
+            <span class="score">75% First Class with Distinction (FCD)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: ENTERPRISE EXPERIENCE TIMELINE -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="section-head">
+        <div>
+          <p class="section-eyebrow">proven track record · mission-critical systems</p>
+          <h2 class="section-title" id="experience-title">engineering <em>history.</em></h2>
+        </div>
+        <p class="section-desc">From high-concurrency microservices at TCS to autonomous agent systems at BluePatterns AI.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Job 1 -->
+        <article class="timeline-card">
+          <div class="timeline-meta">
+            <span class="timeline-company">BluePatterns AI</span>
+            <span class="timeline-role">Founder & AI/ML Developer</span>
+            <span class="timeline-date">Apr 2025 — Present • Bengaluru</span>
+          </div>
+          <div class="timeline-content">
+            <ul>
+              <li>Architected and deployed <strong>aware.ai</strong>, an adaptive multi-agent inference layer featuring automated exception fallback logic and self-healing state-recovery loops for enterprise workflows.</li>
+              <li>Engineered long-running execution pipelines using <strong>OpenClaw</strong> and <strong>LangGraph</strong> capable of multi-step autonomous reasoning and scheduled background execution.</li>
+              <li>Designed strict, idempotent JSON schemas and tool definitions for agent tool-calling, enabling safe third-party SaaS integrations with multi-tenant access control.</li>
+              <li>Engineered pre-deployment evaluation pipelines measuring prompt resilience, structural output drift, and agent logic stability with safe rollback capabilities.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Job 2 -->
+        <article class="timeline-card">
+          <div class="timeline-meta">
+            <span class="timeline-company">Tata Consultancy Services</span>
+            <span class="timeline-role">Senior System Engineer</span>
+            <span class="timeline-date">Dec 2022 — May 2025 • Bengaluru</span>
+          </div>
+          <div class="timeline-content">
+            <ul>
+              <li>Built and maintained enterprise-grade Python microservices, data pipelines, and transactional layers using PostgreSQL and Redis under strict mission-critical SLAs.</li>
+              <li>Engineered secure third-party API connector frameworks managing OAuth flows, high-concurrency rate limiting, and defensive data validation mechanisms.</li>
+              <li>Reduced API latency through targeted database indexing and automated query optimization while establishing observability with SigNoz and Datadog.</li>
+              <li>Spearheaded refactoring of legacy batch processes to incorporate robust state management, minimizing transactional failures during unexpected downtime.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Job 3 -->
+        <article class="timeline-card">
+          <div class="timeline-meta">
+            <span class="timeline-company">NIT Tiruchirappalli</span>
+            <span class="timeline-role">Engineer Intern</span>
+            <span class="timeline-date">2020 — 2021 • Tiruchirappalli</span>
+          </div>
+          <div class="timeline-content">
+            <ul>
+              <li>Conducted foundational engineering research and collaborated on machine learning problem-solving within applied academic and computational frameworks.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 5: CREDENTIALS & GITHUB ANALYTICS -->
+    <section class="section" id="credentials" aria-labelledby="creds-title">
+      <div class="section-head">
+        <div>
+          <p class="section-eyebrow">continuous mastery · industry certifications</p>
+          <h2 class="section-title" id="creds-title">credentials & <em>code.</em></h2>
+        </div>
+        <p class="section-desc">Industry credentials from Google, Stanford, IBM, and live GitHub contributions.</p>
+      </div>
+
+      <div class="certs-grid">
+        <div class="cert-card">
+          <span class="cert-name">Google AI Essentials</span>
+          <span class="cert-issuer">Coursera • Aug 2024</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-name">Prompt Engineering for GenAI</span>
+          <span class="cert-issuer">LinkedIn • Jul 2024</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-name">Databases & SQL for Data Science (Honors)</span>
+          <span class="cert-issuer">IBM • Jan 2023</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-name">ETL: Extract, Transform & Load</span>
+          <span class="cert-issuer">CertNexus • Jun 2022</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-name">AWS Machine Learning</span>
+          <span class="cert-issuer">Coursera • May 2021</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-name">Machine Learning</span>
+          <span class="cert-issuer">Stanford University • Apr 2021</span>
+        </div>
+      </div>
+
+      <!-- GitHub Activity Stats -->
+      <div class="stats-container">
+        <div class="stat-item">
+          <img src="https://github-readme-stats.vercel.app/api?username=Sandeep-Hipparagi&show_icons=true&theme=radical&rank_icon=github" alt="GitHub Stats" loading="lazy" />
+        </div>
+        <div class="stat-item">
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sandeep-Hipparagi&layout=compact&theme=radical" alt="Top Languages" loading="lazy" />
+        </div>
+        <div class="stat-item">
+          <img src="https://github-readme-streak-stats.herokuapp.com/?user=Sandeep-Hipparagi&theme=radical" alt="GitHub Streak" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       OUTRO & FOOTER (Warm Amber Launchpad Style)
+       ============================================================ -->
+  <footer class="outro" id="contact">
+    <div class="outro-inner">
+      <h2 class="outro-headline">now let's <em>build.</em></h2>
+
+      <div class="outro-grid">
+        <p class="outro-copy">
+          Whether you need <strong>enterprise multi-agent architectures</strong>, <strong>self-healing runtime systems</strong>, or <strong>academic faculty & research partnerships</strong> — let's turn experimental AI into dependable production reality.
+        </p>
+
+        <div class="outro-actions">
+          <div class="install-stack">
+            <span class="install-label">get in touch</span>
+            <pre class="install"><span class="copy-wrap"><button class="copy" type="button" data-copy="hipparagi95@gmail.com">copy</button></span><code><span class="prompt">$</span> mailto:hipparagi95@gmail.com</code></pre>
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a class="btn-primary" href="mailto:hipparagi95@gmail.com">✉ Send Email</a>
+            <a class="btn-primary" style="background: oklch(28% 0.06 var(--hue));" href="resume.pdf" target="_blank" rel="noopener">📄 Download Resume (PDF)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="https://bluepatterns.ai/" target="_blank" rel="noopener">BluePatterns AI</a>
+        <a href="https://linkedin.com/in/sandeephipparagi" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Sandeep-Hipparagi" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://huggingface.co/Sandeep4235" target="_blank" rel="noopener">Hugging Face</a>
+        <a href="https://twitter.com/hipparagi_here" target="_blank" rel="noopener">X / Twitter</a>
+        <a href="https://sandeephipparagi.blogspot.com/" target="_blank" rel="noopener">Blog</a>
+        <a href="https://www.credly.com/users/sandeep-sukumar-hipparagi" target="_blank" rel="noopener">Credly</a>
+        <a href="https://www.hackerrank.com/sandeeph1537" target="_blank" rel="noopener">HackerRank</a>
+      </div>
+
+      <div class="colophon">
+        <span>© 2026 Sandeep Hipparagi. Built with craft, performance, and modern web standards.</span>
+        <span>Bengaluru, Karnataka, India</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- System Inspection Native Modal Dialog -->
+  <dialog id="system-inspect-modal" class="system-modal" aria-labelledby="modal-title">
+    <h3 id="modal-title" style="margin-top: 0; color: var(--dark-accent); font-family: 'Geist Mono', monospace; font-size: 18px;"></h3>
+    <div id="modal-body" style="font-size: 14px; line-height: 1.6; color: var(--dark-ink-soft);"></div>
+    <form method="dialog">
+      <button type="submit" class="btn-primary" style="padding: 8px 16px; font-size: 13px;">Close</button>
+    </form>
+  </dialog>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
+
