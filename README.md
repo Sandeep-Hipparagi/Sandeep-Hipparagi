@@ -1,7 +1,7 @@
 <div align="center">
 
 # Sandeep Hipparagi
-### AI/ML Developer & Researcher • Founder, BluePatterns AI
+### AI/ML Developer • Researcher • Founder • BluePatterns AI
 ### Multi-Agent Systems • Self-Healing Architectures • Production LLM Infrastructure
 
 <p align="center">
@@ -20,6 +20,8 @@
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Sandeep-Hipparagi&label=Profile%20Views&color=ff7b54&style=flat-square" alt="Profile Views" />
 </p>
+
+[![Sandeep Hipparagi launch site](portfolio/hero.png)](https://sandeep-hipparagi.github.io/Sandeep-Hipparagi/portfolio/index.html)
 
 </div>
 
