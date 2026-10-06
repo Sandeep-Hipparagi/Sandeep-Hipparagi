@@ -2,25 +2,27 @@
 /* Aesthetic inspired by /brag (https://latent-spaces.github.io/brag/) */
 
 :root {
-  --hue: 35;
+  /* Brand Theme Colors */
+  --theme-primary: #ff5e2c;
+  --theme-secondary: #fff6c0;
 
-  /* Hero Theme (Warm Amber / Dark Ink) */
-  --hero-bg: oklch(64% 0.22 var(--hue));
-  --hero-ink: oklch(16% 0.06 var(--hue));
-  --hero-ink-soft: oklch(28% 0.06 var(--hue));
-  --hero-tint: oklch(96% 0.02 var(--hue));
+  /* Hero Theme (Vibrant Coral Orange & Cream Tint) */
+  --hero-bg: #ff5e2c;
+  --hero-ink: #190905;
+  --hero-ink-soft: #3d1b10;
+  --hero-tint: #fff6c0;
 
-  /* Dark Obsidian System Theme */
-  --dark-bg: oklch(13% 0.02 var(--hue));
-  --dark-bg-elev: oklch(17% 0.03 var(--hue));
-  --dark-bg-hover: oklch(22% 0.04 var(--hue));
-  --dark-ink: oklch(96% 0.02 var(--hue));
-  --dark-ink-soft: oklch(72% 0.03 var(--hue));
-  --dark-ink-dim: oklch(52% 0.02 var(--hue));
-  --dark-rule: oklch(24% 0.02 var(--hue));
-  --dark-accent: oklch(72% 0.22 var(--hue));
-  --dark-accent-glow: oklch(72% 0.22 var(--hue) / 0.25);
-  --dark-success: oklch(68% 0.18 145);
+  /* Dark Obsidian System Theme with Warm Cream Typography */
+  --dark-bg: #120e0c;
+  --dark-bg-elev: #1a1411;
+  --dark-bg-hover: #241c18;
+  --dark-ink: #fff6c0;
+  --dark-ink-soft: #d8cea0;
+  --dark-ink-dim: #948c66;
+  --dark-rule: #2e241e;
+  --dark-accent: #ff5e2c;
+  --dark-accent-glow: rgba(255, 94, 44, 0.25);
+  --dark-success: #27c93f;
 
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -210,6 +212,39 @@ button {
   background: var(--hero-ink);
   color: var(--hero-tint);
   transform: translateY(-1px);
+}
+
+/* Skiper26 Theme Toggle Button */
+.skiper-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--hero-ink);
+  color: var(--hero-tint);
+  border: 1px solid oklch(16% 0.06 var(--hue) / 0.15);
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1), background 160ms var(--ease-out);
+}
+.skiper-toggle-btn:hover {
+  transform: scale(1.1);
+  background: #000;
+}
+.skiper-toggle-btn:active {
+  transform: scale(0.92);
+}
+.skiper-toggle-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-theme="light"] .skiper-toggle-icon,
+.light .skiper-toggle-icon {
+  transform: rotate(180deg);
 }
 
 /* Hero Main */
@@ -1112,7 +1147,7 @@ main {
 
 .stats-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 @media (max-width: 900px) {
@@ -1129,9 +1164,6 @@ main {
   text-align: center;
 }
 .stat-item img {
-  display: block;
-  max-width: 100%;
-  height: auto;
   margin: 0 auto;
   border-radius: var(--radius-sm);
 }
