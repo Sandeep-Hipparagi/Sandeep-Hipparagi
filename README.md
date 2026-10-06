@@ -115,8 +115,8 @@ Single Demos             →   Scalable, Containerized Microservices
   - Developing localization and vernacular reasoning frameworks for open-weight LLMs
   - Multi-agent coordination paradigms, self-healing state graphs, and Human-in-the-Loop verification
 - **Education**:
-  - **Master's Degree** — Amrita Vishwa Vidyapeetham, Coimbatore (CGPA: **8.25**)
-  - **Bachelor's Degree** — KLE Institute of Technology, Hubli (VTU First Class with Distinction — **75%**)
+  - **Master's Degree** — Amrita Vishwa Vidyapeetham, Coimbatore
+  - **Bachelor's Degree** — KLE Institute of Technology, Hubli
 
 ---
 
@@ -138,10 +138,6 @@ Verify credentials on [Credly](https://www.credly.com/users/sandeep-sukumar-hipp
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Sandeep-Hipparagi&show_icons=true&theme=radical&rank_icon=github" alt="GitHub Stats" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sandeep-Hipparagi&layout=compact&theme=radical" alt="Top Languages" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Sandeep-Hipparagi&theme=radical" alt="GitHub Streak" />
 </p>
 
 ---
