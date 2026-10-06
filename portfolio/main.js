@@ -9,16 +9,11 @@
   let soundEnabled = true;
 
   const initAudio = () => {
-    try {
-      if (!audioCtx && (window.AudioContext || window.webkitAudioContext)) {
-        const AudioClass = window.AudioContext || window.webkitAudioContext;
-        audioCtx = new AudioClass();
-      }
-      if (audioCtx && audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-    } catch (e) {
-      // Audio autoplay policy or failure fallback
+    if (!audioCtx && (window.AudioContext || window.webkitAudioContext)) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx && audioCtx.state === 'suspended') {
+      audioCtx.resume();
     }
   };
 
@@ -38,7 +33,7 @@
       osc.start();
       osc.stop(audioCtx.currentTime + duration);
     } catch (e) {
-      // Graceful fallback
+      // Audio autoplay policy or failure fallback
     }
   };
 
@@ -55,6 +50,55 @@
   }
 
   // ============================================================
+  // Skiper26 Live Theme Transitions (Default: Dark -> Vanilla White)
+  // ============================================================
+  const themeToggleBtn = document.getElementById('theme-toggle-btn');
+  const initialTheme = localStorage.getItem('theme') || 'dark';
+
+  const applyThemeClasses = (theme) => {
+    document.documentElement.classList.remove('dark', 'light');
+    document.documentElement.classList.add(theme);
+    document.documentElement.setAttribute('data-theme', theme);
+    if (themeToggleBtn) {
+      themeToggleBtn.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'vanilla white' : 'dark'} mode`);
+      themeToggleBtn.setAttribute('title', `Current: ${theme === 'dark' ? 'Dark' : 'Vanilla White'} mode (Click to toggle)`);
+    }
+  };
+
+  // Apply default dark mode on launch
+  applyThemeClasses(initialTheme);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', (e) => {
+      const isCurrentlyDark = document.documentElement.classList.contains('dark');
+      const nextTheme = isCurrentlyDark ? 'light' : 'dark';
+
+      playClick(isCurrentlyDark ? 1100 : 750, 'sine', 0.04);
+
+      // Record toggle position for circular expansion origin
+      const rect = themeToggleBtn.getBoundingClientRect();
+      const x = e.clientX || (rect.left + rect.width / 2);
+      const y = e.clientY || (rect.top + rect.height / 2);
+      document.documentElement.style.setProperty('--toggle-x', `${x}px`);
+      document.documentElement.style.setProperty('--toggle-y', `${y}px`);
+
+      const updateDOM = () => {
+        applyThemeClasses(nextTheme);
+        try {
+          localStorage.setItem('theme', nextTheme);
+        } catch (err) {}
+      };
+
+      if (!document.startViewTransition || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        updateDOM();
+        return;
+      }
+
+      document.startViewTransition(updateDOM);
+    });
+  }
+
+  // ============================================================
   // Interactive Agent Dispatch & Self-Healing Simulator
   // ============================================================
   const simSteps = document.querySelectorAll('.sim-step');
@@ -63,16 +107,11 @@
   const simResetBtn = document.getElementById('sim-reset-btn');
   const simStatus = document.getElementById('sim-status-text');
 
-  let activeTimers = [];
+  let simTimer = null;
   let isRunning = false;
 
-  const clearAllTimers = () => {
-    activeTimers.forEach(id => clearTimeout(id));
-    activeTimers = [];
-  };
-
   const resetSimulator = () => {
-    clearAllTimers();
+    if (simTimer) clearTimeout(simTimer);
     isRunning = false;
     simSteps.forEach(step => {
       step.dataset.state = 'idle';
@@ -90,7 +129,6 @@
   const runSimulation = (mode = 'normal') => {
     if (isRunning) return;
     isRunning = true;
-    clearAllTimers();
     if (simRunBtn) simRunBtn.disabled = true;
     if (simFailBtn) simFailBtn.disabled = true;
     initAudio();
@@ -111,7 +149,7 @@
     ];
 
     sequence.forEach(({ step, delay, sound, label, isRepair }, index) => {
-      const timerId = setTimeout(() => {
+      setTimeout(() => {
         if (!isRunning) return;
         if (simStatus) simStatus.textContent = label;
         playClick(sound, isRepair ? 'sawtooth' : 'sine', isRepair ? 0.08 : 0.04);
@@ -133,8 +171,7 @@
         }
 
         if (index === sequence.length - 1) {
-          const finishTimer = setTimeout(() => {
-            if (!isRunning) return;
+          setTimeout(() => {
             curr.dataset.state = 'success';
             const ind = curr.querySelector('.step-indicator');
             if (ind) ind.textContent = '✓';
@@ -144,10 +181,8 @@
             if (simRunBtn) simRunBtn.disabled = false;
             if (simFailBtn) simFailBtn.disabled = false;
           }, 500);
-          activeTimers.push(finishTimer);
         }
       }, delay);
-      activeTimers.push(timerId);
     });
   };
 
@@ -173,19 +208,16 @@
   }
 
   // ============================================================
-  // Copy to Clipboard (Modern + Mobile-Safe Fallback)
+  // Copy to Clipboard (Modern + Legacy Fallback)
   // ============================================================
   const legacyCopy = (text) => {
     const ta = document.createElement('textarea');
     ta.value = text;
     ta.setAttribute('readonly', '');
     ta.style.position = 'fixed';
-    ta.style.left = '-9999px';
-    ta.style.top = '0';
     ta.style.opacity = '0';
     document.body.appendChild(ta);
     ta.select();
-    ta.setSelectionRange(0, 99999);
     let ok = false;
     try {
       ok = document.execCommand('copy');
@@ -239,7 +271,7 @@
       const filter = btn.dataset.filter || 'all';
       galleryCards.forEach(card => {
         if (filter === 'all' || card.dataset.category === filter) {
-          card.style.display = '';
+          card.style.display = 'flex';
           card.style.opacity = '1';
         } else {
           card.style.display = 'none';
@@ -320,18 +352,5 @@
     });
   });
 
-  // Close modal when clicking outside (on backdrop)
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      const rect = modal.getBoundingClientRect();
-      const inDialog = (
-        rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
-        rect.left <= e.clientX && e.clientX <= rect.left + rect.width
-      );
-      if (!inDialog) {
-        modal.close();
-      }
-    });
-  }
-
 })();
+
