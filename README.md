@@ -31,9 +31,9 @@
 
 > *"The real advantage in AI is not just the model. It is the architecture around it."*
 
-I design and build the systems behind production-grade AI — the routing, state persistence, orchestration, evaluation, and guardrail layers that transform experimental intelligence into dependable, resilient real-world software.
+I design and build the systems behind production-grade AI — the routing, state persistence, orchestration, evaluation, and guardrail layers that transform experimental intelligence into dependable, production-grade capability.
 
-With a background spanning **IEEE-published research**, **enterprise systems engineering at TCS**, and **founding BluePatterns AI**, my work focuses on bridging academic theory with robust industry execution across multi-agent coordination, Indic AI systems, legal-tech, and cyber defense.
+With a background spanning **IEEE-published research**, **enterprise systems engineering at TCS**, and **founding BluePatterns AI**, my work focuses on bridging academic theory with robust industrial AI systems, especially in multi-agent orchestration, secure tooling, and local-first inference infrastructure.
 
 ---
 
@@ -45,7 +45,7 @@ With a background spanning **IEEE-published research**, **enterprise systems eng
 
 | Domain | Technologies & Frameworks |
 | :--- | :--- |
-| **Agentic & Resilient Systems** | Multi-Agent Coordination, LangGraph, OpenClaw, Model Context Protocol (MCP), Self-Healing Runtimes, State Graphs, Human-in-the-Loop (HITL), Retry Semantics, Idempotent Workflows |
+| **Agentic & Resilient Systems** | Multi-Agent Coordination, LangGraph, OpenClaw, Model Context Protocol (MCP), Self-Healing Runtimes, State Graphs, Human-in-the-Loop (HITL), Retry Semantics, Idempotent Execution |
 | **LLMs & Fine-Tuning** | Llama-3, Qwen, Unsloth QLoRA, GGUF Quantization, `llama.cpp`, Ollama, Sarvam AI Stack (Aarya, Akshar, Saaras, Bulbul), Prompt Metaprogramming |
 | **Backend & Systems** | Python (3+ yrs), TypeScript, FastAPI, RESTful Microservices, SaaS API Integrations, OAuth Flows, High-Availability SLA Architecture |
 | **Data & Storage** | PostgreSQL, Redis (State Persistence & Caching), Vector Databases, Hybrid Search, Strategic Chunking, RAG Optimization |
@@ -65,24 +65,31 @@ Black-box Executions     →   Auditable Human-in-the-Loop (HITL) Checkpoints
 Single Demos             →   Scalable, Containerized Microservices
 ```
 
+### 🧠 Recent Public Repo
+
+| Project | Focus | Description |
+| :--- | :--- | :--- |
+| **[SLNG-AI](https://github.com/Sandeep-Hipparagi/SLNG-AI)** | Sovereign Indic Triage & Compliance Voice Agent | A public AI voice agent built with `slng-ai/unmute`, the SLNG Sovereign Speech Gateway, and Google Gemini 2.5 Flash for Indic voice triage, compliance workflows, and real-world automation. |
+
 ### 🧠 Model Releases & Fine-Tuning
 
 | Project | Platform | Description |
 | :--- | :--- | :--- |
-| **[llama3-8b-Wisdom](https://huggingface.co/Sandeep4235)** | Hugging Face • GitHub | Specialized Llama-3 8B fine-tuned with Unsloth QLoRA on a curated philosophical dataset. Implements a 3-stage prompt pipeline (`Instruction → Thought → Response`) to eliminate conversational drift. Released with full GGUF quantizations (`Q4_K_M`, `Q5_K_M`, `Q8_0`) for low-latency CPU inference via `llama.cpp`. |
-| **[Qwen3-4B-PromptCraft](https://huggingface.co/Sandeep4235)** | Hugging Face • GitHub | Zero-reasoning prompt engineering model fine-tuned on synthetic instruction pairs. Designed to suppress internal reasoning tokens to generate deterministic, production-grade agent system prompts compliant with OWASP LLM security standards under Apache-2.0. |
+| **[llama3-8b-Wisdom](https://huggingface.co/Sandeep4235)** | Hugging Face • GitHub | Specialized Llama-3 8B fine-tuned with Unsloth QLoRA on a curated philosophical dataset. Implements a 3-stage reasoning pipeline for controlled, grounded responses. |
+| **[Qwen3-4B-PromptCraft](https://huggingface.co/Sandeep4235)** | Hugging Face • GitHub | Zero-reasoning prompt engineering model fine-tuned on synthetic instruction pairs. Designed to suppress shallow pattern completion and improve structured prompting. |
 
 ### ⚡ Agentic Orchestration & Production AI Systems
 
 | Project | Architecture & Focus | Key Capabilities |
 | :--- | :--- | :--- |
-| **Aware.ai** | Multi-Agent Inference Router | Dual-plane inference gateway (FastAPI + Ollama) with Redis-backed state management, dynamic guardrails (PII masking, hallucination filtering), automated agent registration, and Docker Compose orchestration. |
-| **Universal AI Switchboard** | Graph-Driven MCP Orchestration | Decoupled generative AI architecture connected via Model Context Protocol (MCP). Features self-healing error loops, least-privilege token scoping, HitL approval checkpoints, and zero-downtime model hot-swapping via YAML config. |
-| **Autonomous QA Agent** | Self-Healing Test Lifecycle | End-to-end meta-agent executing web testing via a deterministic state graph coordinating three decoupled sub-agents: **Planner**, **Generator**, and **Healer**, requiring only a target URL. |
-| **NyayaRakshak** | Legal Complaint Auditor | Deployed on Google Cloud Run utilizing the Sarvam AI stack (Aarya, Akshar) to audit and validate complaints against Indian statutory frameworks, including the **Bharatiya Nyaya Sanhita (BNS) 2023**, with automated OCR extraction. |
-| **CyberGuard 1930** | Voice-First Fraud Reporting | TypeScript and Sarvam AI (Saaras, Bulbul) portal facilitating voice-first cybercrime and financial fraud reporting across Indic languages. Features AI risk-scoring for APK scams, evidence hash validation, and law enforcement RBAC. |
-| **EduTech AI Tutor** | Personalized Learning Engine | Multi-role platform (students, teachers, parents) grounded in NCERT curricula with interactive diagrams, real-time student engagement tracking, and automated intervention triggers. |
-| **A3H Harness** | Reliability & Eval Framework | Comprehensive benchmark and evaluation harness measuring prompt resilience, structural output drift, schema compliance, and agent logic prior to production rollout. |
+| **Aware.ai** | Multi-Agent Inference Router | Dual-plane inference gateway (FastAPI + Ollama) with Redis-backed state management, dynamic guardrails (PII masking, hallucination filtering), automated retries, and local-first execution. |
+| **SLNG-AI** | Sovereign Voice + Triage AI | Voice-first workflow orchestration using SLNG Sovereign Speech Gateway and Gemini 2.5 Flash for Indic compliance, triage, and task execution. |
+| **Universal AI Switchboard** | Graph-Driven MCP Orchestration | Decoupled generative AI architecture connected via Model Context Protocol (MCP). Features self-healing error loops, least-privilege access, and resilient runtime orchestration. |
+| **Autonomous QA Agent** | Self-Healing Test Lifecycle | End-to-end meta-agent executing web testing via a deterministic state graph coordinating three decoupled sub-agents: **Planner**, **Generator**, and **Validator**. |
+| **NyayaRakshak** | Legal Complaint Auditor | Deployed on Google Cloud Run utilizing the Sarvam AI stack (Aarya, Akshar) to audit and validate complaints against Indian statutory frameworks, including legal structure and evidence consistency. |
+| **CyberGuard 1930** | Voice-First Fraud Reporting | TypeScript and Sarvam AI (Saaras, Bulbul) portal facilitating voice-first cybercrime and financial fraud reporting across Indic languages. Features multi-step voice intake with safety-aware response logic. |
+| **EduTech AI Tutor** | Personalized Learning Engine | Multi-role platform (students, teachers, parents) grounded in NCERT curricula with interactive diagrams, real-time student engagement tracking, and adaptive content generation. |
+| **A3H Harness** | Reliability & Eval Framework | Comprehensive benchmark and evaluation harness measuring prompt resilience, structural output drift, schema compliance, and agent logic prior to deployment. |
 
 ---
 
@@ -159,7 +166,6 @@ Verify credentials on [Credly](https://www.credly.com/users/sandeep-sukumar-hipp
 
 <br />
 
-**[BluePatterns AI](https://bluepatterns.ai/)** • **[LinkedIn](https://linkedin.com/in/sandeephipparagi)** • **[GitHub](https://github.com/Sandeep-Hipparagi)** • **[Hugging Face](https://huggingface.co/Sandeep4235)** • **[Twitter/X](https://twitter.com/hipparagi_here)** • **[Blog](https://sandeephipparagi.blogspot.com/)** • **[Email](mailto:hipparagi95@gmail.com)**
+**[BluePatterns AI](https://bluepatterns.ai/)** • **[LinkedIn](https://linkedin.com/in/sandeephipparagi)** • **[GitHub](https://github.com/Sandeep-Hipparagi)** • **[Hugging Face](https://huggingface.co/Sandeep4235)** • **[Website](https://bluepatterns.ai/)**
 
 </div>
-
