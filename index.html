@@ -1,13 +1,2342 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="refresh" content="0; url=portfolio/index.html" />
-  <title>Redirecting to Portfolio...</title>
-  <script>window.location.href = "portfolio/index.html";</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sandeep Hipparagi — AI Systems &amp; Research Portfolio</title>
+  <meta name="description" content="AI/ML Developer &amp; Researcher. Multi-Agent Systems, Self-Healing Architectures, and Production LLM Infrastructure. Founder of BluePatterns AI." />
+  <meta name="theme-color" content="#ff5e2c" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sandeep-hipparagi.github.io/Sandeep-Hipparagi/" />
+  <meta property="og:title" content="Sandeep Hipparagi — Production AI Architect &amp; Researcher" />
+  <meta property="og:description" content="The real advantage in AI is not just the model. It is the architecture around it." />
+  <meta property="og:image" content="assets/video/poster.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://sandeep-hipparagi.github.io/Sandeep-Hipparagi/" />
+  <meta name="twitter:title" content="Sandeep Hipparagi — Production AI Architect &amp; Researcher" />
+  <meta name="twitter:description" content="The real advantage in AI is not just the model. It is the architecture around it." />
+  <meta name="twitter:image" content="assets/video/poster.jpg" />
+
+  <!-- Self-hosted font declarations with system fallbacks -->
+  <style>
+    @font-face {
+      font-family: "Geist";
+      src: url("assets/fonts/Geist-Regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Geist";
+      src: url("assets/fonts/Geist-Medium.woff2") format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Geist";
+      src: url("assets/fonts/Geist-Bold.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Geist";
+      src: url("assets/fonts/Geist-Black.woff2") format("woff2");
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Geist Mono";
+      src: url("assets/fonts/GeistMono-Regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Geist Mono";
+      src: url("assets/fonts/GeistMono-Bold.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* CSS / UI Tokens (Modeled on /brag aesthetic: burnt-orange & obsidian) */
+    /* MIT License notice: CSS/JS interaction patterns inspired by /brag (github.com/latent-spaces/brag) */
+    :root {
+      --accent: #ff5e2c;
+      --accent-dark: #c8421a;
+
+      /* Hero theme: burnt-orange with dark type (7.4:1 contrast ratio, WCAG AA pass) */
+      --hero-bg: #ff5e2c;
+      --hero-ink: #190905;
+      --hero-ink-soft: #3d1b10;
+      --hero-tint: #fff6c0;
+
+      /* Dark theme defaults */
+      --dark-bg: #120e0c;
+      --dark-bg-elev: #1a1411;
+      --dark-bg-hover: #241c18;
+      --dark-ink: #fff6c0;
+      --dark-ink-soft: #d8cea0;
+      --dark-ink-dim: #948c66;
+      --dark-rule: #2e241e;
+      --dark-accent: #ff5e2c;
+      --dark-accent-glow: rgba(255, 94, 44, 0.25);
+      --dark-success: #27c93f;
+
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-pill: 9999px;
+
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+      --max-line: 65ch;
+      --max-page: 1440px;
+    }
+
+    html.light {
+      --dark-bg: #faf7f2;
+      --dark-bg-elev: #ffffff;
+      --dark-bg-hover: #f2ede4;
+      --dark-ink: #1c1512;
+      --dark-ink-soft: #4a3c35;
+      --dark-ink-dim: #7a6b63;
+      --dark-rule: #e5ded4;
+      --dark-accent: #d64716;
+      --dark-accent-glow: rgba(214, 71, 22, 0.15);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    html {
+      color-scheme: light dark;
+    }
+
+    body {
+      font-family: "Geist", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-feature-settings: "ss01", "ss03", "cv11";
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      line-height: 1.45;
+      background: var(--dark-bg);
+      color: var(--dark-ink);
+    }
+
+    img, video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* Accessibility Skip Link */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      background: var(--hero-ink);
+      color: var(--hero-tint);
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-family: "Geist Mono", monospace;
+      font-size: 13px;
+      font-weight: 500;
+      z-index: 9999;
+      transition: top 180ms ease;
+    }
+    .skip-link:focus {
+      top: 16px;
+      outline: 2px solid var(--dark-accent);
+    }
+
+    /* ============================================================
+       HERO SECTION (Burnt-Orange Field)
+       ============================================================ */
+    .hero {
+      min-height: 100svh;
+      background: var(--hero-bg);
+      color: var(--hero-ink);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      padding: clamp(20px, 3.5vw, 48px);
+      gap: clamp(36px, 4.5vw, 64px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      font-family: "Geist Mono", monospace;
+      font-size: 13px;
+      letter-spacing: -0.01em;
+      z-index: 10;
+      max-width: var(--max-page);
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .topbar .mark {
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: -0.02em;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .topbar .mark .slash {
+      opacity: 0.5;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--hero-ink);
+      color: var(--hero-tint);
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .status-pill .pulse-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #27c93f;
+      animation: pulse-glow 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.3); }
+    }
+
+    .topbar nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(12px, 1.8vw, 24px);
+      flex-wrap: wrap;
+    }
+
+    .topbar nav a {
+      opacity: 0.8;
+      transition: opacity 160ms var(--ease-out);
+      font-weight: 500;
+    }
+    .topbar nav a:hover,
+    .topbar nav a:focus-visible {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(25, 9, 5, 0.12);
+      color: var(--hero-ink);
+      transition: background 160ms var(--ease-out), transform 160ms var(--ease-out);
+    }
+    .icon-btn:hover {
+      background: var(--hero-ink);
+      color: var(--hero-tint);
+      transform: translateY(-1px);
+    }
+
+    .theme-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--hero-ink);
+      color: var(--hero-tint);
+      cursor: pointer;
+      transition: transform 160ms var(--ease-out);
+    }
+    .theme-toggle-btn:hover {
+      transform: scale(1.08);
+    }
+
+    .hero-main {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: clamp(32px, 4vw, 64px);
+      align-items: center;
+      max-width: var(--max-page);
+      margin: 0 auto;
+      width: 100%;
+    }
+    @media (max-width: 980px) {
+      .hero-main {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-tagline {
+      font-family: "Geist Mono", monospace;
+      font-size: 13px;
+      text-transform: lowercase;
+      letter-spacing: 0.02em;
+      opacity: 0.85;
+      margin: 0 0 16px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-headline {
+      font-size: clamp(40px, 5.8vw, 84px);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      font-weight: 900;
+      margin: 0 0 24px 0;
+      text-transform: lowercase;
+    }
+    .hero-headline .emph {
+      font-style: italic;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 6px;
+    }
+
+    .hero-sub {
+      font-size: clamp(17px, 1.6vw, 21px);
+      line-height: 1.4;
+      max-width: 52ch;
+      color: var(--hero-ink-soft);
+      margin: 0;
+    }
+    .hero-sub strong {
+      color: var(--hero-ink);
+    }
+
+    /* Simulator Tracer Card */
+    .hero-sim-card {
+      background: var(--dark-bg-elev);
+      color: var(--dark-ink);
+      border: 1px solid var(--dark-rule);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .sim-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--dark-rule);
+      padding-bottom: 12px;
+    }
+    .sim-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .sim-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .sim-dot.red { background: #ff5f56; }
+    .sim-dot.yellow { background: #ffbd2e; }
+    .sim-dot.green { background: #27c93f; }
+
+    .sim-title {
+      font-family: "Geist Mono", monospace;
+      font-size: 11px;
+      color: var(--dark-ink-dim);
+      text-transform: lowercase;
+    }
+
+    .sim-audio-btn {
+      font-family: "Geist Mono", monospace;
+      font-size: 11px;
+      color: var(--dark-ink-dim);
+      cursor: pointer;
+      padding: 2px 6px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--dark-rule);
+    }
+
+    .sim-query-box {
+      background: var(--dark-bg);
+      border: 1px solid var(--dark-rule);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .sim-query-label {
+      font-family: "Geist Mono", monospace;
+      font-size: 10px;
+      color: var(--dark-ink-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .sim-query-text {
+      font-size: 13px;
+      font-family: "Geist Mono", monospace;
+      color: var(--dark-accent);
+      font-weight: 600;
+    }
+
+    .sim-graph {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sim-step {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 12px;
+      background: var(--dark-bg);
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      transition: all 200ms ease;
+    }
+    .sim-step[data-state="active"] {
+      border-color: var(--dark-accent);
+      background: var(--dark-bg-hover);
+    }
+    .sim-step[data-state="success"] {
+      border-color: var(--dark-success);
+    }
+    .sim-step[data-state="repair"] {
+      border-color: #ff9800;
+      background: rgba(255, 152, 0, 0.08);
+    }
+
+    .step-indicator {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--dark-rule);
+      color: var(--dark-ink-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Geist Mono", monospace;
+      font-size: 11px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .sim-step[data-state="active"] .step-indicator {
+      background: var(--dark-accent);
+      color: #fff;
+    }
+    .sim-step[data-state="success"] .step-indicator {
+      background: var(--dark-success);
+      color: #fff;
+    }
+    .sim-step[data-state="repair"] .step-indicator {
+      background: #ff9800;
+      color: #000;
+    }
+
+    .step-details {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      flex: 1;
+    }
+    .step-name {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .step-metric {
+      font-family: "Geist Mono", monospace;
+      font-size: 10px;
+      color: var(--dark-ink-dim);
+    }
+    .step-desc {
+      font-size: 11px;
+      color: var(--dark-ink-soft);
+    }
+
+    .sim-controls {
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+      flex-wrap: wrap;
+    }
+    .sim-trigger-btn {
+      flex: 1;
+      padding: 9px 12px;
+      background: var(--dark-accent);
+      color: #fff;
+      font-family: "Geist Mono", monospace;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      transition: opacity 160ms ease;
+    }
+    .sim-trigger-btn:hover { opacity: 0.9; }
+    .sim-reset-btn {
+      padding: 9px 12px;
+      background: var(--dark-rule);
+      color: var(--dark-ink);
+      font-family: "Geist Mono", monospace;
+      font-size: 11px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Hero Foot */
+    .hero-foot {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      max-width: var(--max-page);
+      margin: 0 auto;
+      width: 100%;
+      align-items: start;
+    }
+    @media (max-width: 840px) {
+      .hero-foot {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .install-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .install-label {
+      font-family: "Geist Mono", monospace;
+      font-size: 11px;
+      color: var(--hero-ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .install {
+      background: var(--hero-ink);
+      color: var(--hero-tint);
+      padding: 11px 16px;
+      border-radius: var(--radius-sm);
+      font-family: "Geist Mono", monospace;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 0;
+      position: relative;
+    }
+    .install code {
+      font-family: inherit;
+      color: inherit;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .install .prompt {
+      color: var(--hero-bg);
+      margin-right: 6px;
+    }
+    .copy-wrap .copy {
+      background: rgba(255, 246, 192, 0.15);
+      color: var(--hero-tint);
+      font-family: "Geist Mono", monospace;
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      transition: background 160ms ease;
+    }
+    .copy-wrap .copy:hover {
+      background: rgba(255, 246, 192, 0.3);
+    }
+    .copy-wrap .copy[data-state="copied"] {
+      background: var(--dark-success);
+      color: #fff;
+    }
+
+    .hlb-card {
+      background: rgba(25, 9, 5, 0.08);
+      border: 1px solid rgba(25, 9, 5, 0.15);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+    }
+    .hlb-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+    }
+    .hlb-title em {
+      font-style: italic;
+    }
+    .hlb-copy {
+      font-size: 13px;
+      color: var(--hero-ink-soft);
+      line-height: 1.45;
+      margin: 0 0 12px 0;
+    }
+    .hlb-facts {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      font-family: "Geist Mono", monospace;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .hlb-facts li::before {
+      content: "• ";
+      color: var(--hero-ink);
+    }
+
+    /* ============================================================
+       VIDEO SECTION (#launch-video)
+       ============================================================ */
+    .video-section {
+      background: var(--dark-bg);
+      padding: clamp(60px, 8vw, 100px) clamp(20px, 3.5vw, 48px);
+      border-bottom: 1px solid var(--dark-rule);
+    }
+    .video-inner {
+      max-width: var(--max-page);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .video-card {
+      background: var(--dark-bg-elev);
+      border: 1px solid var(--dark-rule);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      max-width: 920px;
+      box-shadow: 0 24px 48px -12px rgba(0,0,0,0.5);
+    }
+    .video-frame {
+      position: relative;
+      aspect-ratio: 16/9;
+      background: #0a0806;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .video-frame video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .video-coming-soon {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, rgba(18, 14, 12, 0.92) 0%, rgba(26, 20, 17, 0.95) 100%);
+      pointer-events: none;
+    }
+    .coming-soon-label {
+      font-family: "Geist Mono", monospace;
+      font-size: clamp(14px, 2vw, 18px);
+      color: var(--dark-accent);
+      letter-spacing: 0.04em;
+      font-weight: 700;
+    }
+    .coming-soon-sub {
+      font-family: "Geist Mono", monospace;
+      font-size: 12px;
+      color: var(--dark-ink-dim);
+    }
+    .video-controls {
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--dark-bg-elev);
+      border-top: 1px solid var(--dark-rule);
+    }
+    .vid-sound-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: "Geist Mono", monospace;
+      font-size: 12px;
+      color: var(--dark-ink-dim);
+      background: none;
+      border: 1px solid var(--dark-rule);
+      border-radius: var(--radius-pill);
+      padding: 6px 14px;
+      cursor: pointer;
+      transition: all 160ms ease;
+    }
+    .vid-sound-btn:hover, .vid-sound-btn:focus-visible {
+      color: var(--dark-accent);
+      border-color: var(--dark-accent);
+    }
+    .vid-sound-btn[aria-pressed="true"] {
+      color: var(--dark-accent);
+      border-color: var(--dark-accent);
+      background: rgba(255, 94, 44, 0.1);
+    }
+    .video-caption {
+      font-family: "Geist Mono", monospace;
+      font-size: 11px;
+      color: var(--dark-ink-dim);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #launch-vid { display: none; }
+      .video-coming-soon { position: static; background: none; }
+    }
+
+    /* ============================================================
+       SECTION COMMON STYLES
+       ============================================================ */
+    .section {
+      padding: clamp(60px, 8vw, 120px) clamp(20px, 3.5vw, 48px);
+      max-width: var(--max-page);
+      margin: 0 auto;
+      width: 100%;
+    }
+    .section-head {
+      margin-bottom: clamp(36px, 5vw, 64px);
+    }
+    .section-eyebrow {
+      font-family: "Geist Mono", monospace;
+      font-size: 12px;
+      color: var(--dark-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 0 0 10px 0;
+    }
+    .section-title {
+      font-size: clamp(32px, 5vw, 68px);
+      letter-spacing: -0.03em;
+      font-weight: 900;
+      margin: 0 0 14px 0;
+      text-transform: lowercase;
+    }
+    .section-title em {
+      font-style: italic;
+      color: var(--dark-accent);
+    }
+    .section-desc {
+      font-size: clamp(16px, 1.4vw, 19px);
+      color: var(--dark-ink-soft);
+      max-width: 60ch;
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    /* ============================================================
+       PROTOTYPE -> PRODUCTION VISUAL SECTION
+       ============================================================ */
+    .p2p-section {
+      border-bottom: 1px solid var(--dark-rule);
+    }
+    .p2p-grid {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .p2p-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1.2fr;
+      align-items: center;
+      gap: 24px;
+      padding: 20px 28px;
+      background: var(--dark-bg-elev);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--dark-rule);
+      transition: border-color 200ms ease, background 200ms ease;
+    }
+    .p2p-row:hover {
+      border-color: var(--dark-accent);
+      background: var(--dark-bg-hover);
+    }
+    .p2p-from {
+      font-size: 15px;
+      color: var(--dark-ink-dim);
+      font-weight: 500;
+      text-align: right;
+    }
+    .p2p-arrow {
+      color: var(--dark-accent);
+      font-size: 20px;
+      font-weight: 900;
+      text-align: center;
+      flex-shrink: 0;
+      font-family: "Geist Mono", monospace;
+    }
+    .p2p-to {
+      font-size: 15px;
+      color: var(--dark-ink);
+      font-weight: 600;
+      margin: 0;
+    }
+    @media (max-width: 720px) {
+      .p2p-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        text-align: left;
+        padding: 16px 20px;
+      }
+      .p2p-from { text-align: left; }
+      .p2p-arrow { text-align: left; transform: rotate(90deg); width: 20px; }
+    }
+
+    /* ============================================================
+       MODELS SECTION
+       ============================================================ */
+    .spotlight-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 860px) {
+      .spotlight-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .spotlight-card {
+      background: var(--dark-bg-elev);
+      border: 1px solid var(--dark-rule);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: border-color 200ms ease;
+    }
+    .spotlight-card:hover {
+      border-color: var(--dark-accent);
+    }
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .card-cmd {
+      font-family: "Geist Mono", monospace;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark-ink);
+    }
+    .card-badge {
+      font-family: "Geist Mono", monospace;
+      font-size: 11px;
+      background: rgba(255, 94, 44, 0.12);
+      color: var(--dark-accent);
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      font-weight: 600;
+    }
+    .card-summary {
+      font-size: 14px;
+      color: var(--dark-ink-soft);
+      line-height: 1.5;
+      margin: 0;
+      flex-grow: 1;
+    }
+    .tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .tech-pill {
+      font-family: "Geist Mono", monospace;
+      font-size: 10px;
+      background: var(--dark-bg);
+      border: 1px solid var(--dark-rule);
+      color: var(--dark-ink-dim);
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+    }
+    .card-install .install {
+      background: var(--dark-bg);
+      border: 1px solid var(--dark-rule);
+      color: var(--dark-ink);
+    }
+    .card-install .install .prompt {
+      color: var(--dark-accent);
+    }
+    .card-install .copy-wrap .copy {
+      background: var(--dark-rule);
+      color: var(--dark-ink);
+    }
+    .card-link-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 8px;
+      border-top: 1px solid var(--dark-rule);
+      font-family: "Geist Mono", monospace;
+      font-size: 12px;
+    }
+    .card-link-bar a {
+      color: var(--dark-accent);
+      font-weight: 600;
+    }
+    .card-link-bar a:hover {
+      text-decoration: underline;
+    }
+
+    /* ============================================================
+       FLAGSHIP SYSTEMS GALLERY
+       ============================================================ */
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      font-family: "Geist Mono", monospace;
+      font-size: 12px;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      background: var(--dark-bg-elev);
+      border: 1px solid var(--dark-rule);
+      color: var(--dark-ink-soft);
+      cursor: pointer;
+      transition: all 160ms ease;
+    }
+    .filter-btn:hover {
+      color: var(--dark-ink);
+      border-color: var(--dark-accent);
+    }
+    .filter-btn[data-active="true"] {
+      background: var(--dark-accent);
+      color: #fff;
+      border-color: var(--dark-accent);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 1040px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 680px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gallery-card {
+      background: var(--dark-bg-elev);
+      border: 1px solid var(--dark-rule);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color 200ms ease, transform 200ms ease;
+    }
+    .gallery-card:hover {
+      border-color: var(--dark-accent);
+      transform: translateY(-2px);
+    }
+    .gallery-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .gallery-num {
+      font-family: "Geist Mono", monospace;
+      font-size: 11px;
+      color: var(--dark-accent);
+      font-weight: 700;
+    }
+    .private-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: "Geist Mono", monospace;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--dark-ink-dim);
+      background: var(--dark-bg);
+      border: 1px solid var(--dark-rule);
+      border-radius: var(--radius-pill);
+      padding: 3px 8px;
+      letter-spacing: 0.02em;
+    }
+    .public-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: "Geist Mono", monospace;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--dark-success);
+      background: rgba(39, 201, 63, 0.08);
+      border: 1px solid rgba(39, 201, 63, 0.2);
+      border-radius: var(--radius-pill);
+      padding: 3px 8px;
+    }
+    .gallery-card-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0;
+      color: var(--dark-ink);
+    }
+    .gallery-card-desc {
+      font-size: 13px;
+      color: var(--dark-ink-soft);
+      line-height: 1.45;
+      margin: 0;
+      flex-grow: 1;
+    }
+    .gallery-card-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--dark-rule);
+      font-family: "Geist Mono", monospace;
+      font-size: 11px;
+    }
+    .gallery-card-foot a {
+      color: var(--dark-accent);
+      font-weight: 600;
+    }
+    .inspect-btn {
+      color: var(--dark-ink-dim);
+      cursor: pointer;
+      font-size: 11px;
+    }
+    .inspect-btn:hover {
+      color: var(--dark-ink);
+      text-decoration: underline;
+    }
+
+    /* ============================================================
+       RESEARCH & EXPERIENCE
+       ============================================================ */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      border-left: 2px solid var(--dark-rule);
+      padding-left: 24px;
+      margin-left: 12px;
+    }
+    .timeline-item {
+      position: relative;
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -31px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--dark-accent);
+      border: 2px solid var(--dark-bg);
+    }
+    .timeline-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark-ink);
+      margin: 0 0 4px 0;
+    }
+    .timeline-meta {
+      font-family: "Geist Mono", monospace;
+      font-size: 12px;
+      color: var(--dark-accent);
+      margin-bottom: 8px;
+    }
+    .timeline-bullets {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 14px;
+      color: var(--dark-ink-soft);
+      line-height: 1.5;
+    }
+    .timeline-bullets li {
+      margin-bottom: 6px;
+    }
+
+    .research-card {
+      background: var(--dark-bg-elev);
+      border: 1px solid var(--dark-rule);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .research-badge {
+      align-self: flex-start;
+      font-family: "Geist Mono", monospace;
+      font-size: 11px;
+      color: var(--dark-accent);
+      background: rgba(255, 94, 44, 0.1);
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+    }
+    .research-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0;
+      color: var(--dark-ink);
+    }
+    .research-citation {
+      font-size: 13px;
+      color: var(--dark-ink-soft);
+      line-height: 1.45;
+      margin: 0;
+    }
+    .research-doi-link {
+      font-family: "Geist Mono", monospace;
+      font-size: 12px;
+      color: var(--dark-accent);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .research-doi-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Certifications Grid */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 900px) {
+      .certs-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .certs-grid { grid-template-columns: 1fr; }
+    }
+    .cert-card {
+      background: var(--dark-bg-elev);
+      border: 1px solid var(--dark-rule);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .cert-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--dark-ink);
+    }
+    .cert-issuer {
+      font-family: "Geist Mono", monospace;
+      font-size: 11px;
+      color: var(--dark-ink-dim);
+    }
+
+    /* ============================================================
+       OUTRO & FOOTER (Burnt-Orange Field)
+       ============================================================ */
+    .outro {
+      background: var(--hero-bg);
+      color: var(--hero-ink);
+      padding: clamp(60px, 8vw, 100px) clamp(20px, 3.5vw, 48px);
+    }
+    .outro-inner {
+      max-width: var(--max-page);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .outro-headline {
+      font-size: clamp(48px, 8vw, 110px);
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      font-weight: 900;
+      margin: 0;
+      text-transform: lowercase;
+    }
+    .outro-headline em {
+      font-style: italic;
+      background: var(--hero-ink);
+      color: var(--hero-bg);
+      padding: 0 0.08em;
+      border-radius: 2px;
+    }
+    .outro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (max-width: 800px) {
+      .outro-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .outro-copy {
+      font-size: clamp(17px, 1.6vw, 22px);
+      line-height: 1.35;
+      color: var(--hero-ink-soft);
+      margin: 0;
+    }
+    .outro-copy strong {
+      color: var(--hero-ink);
+    }
+    .outro-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .btn-primary {
+      background: var(--hero-ink);
+      color: var(--hero-tint);
+      font-family: "Geist Mono", monospace;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 14px 24px;
+      border-radius: var(--radius-md);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: transform 160ms ease, background 160ms ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #000;
+    }
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-family: "Geist Mono", monospace;
+      font-size: 12px;
+    }
+    .social-links a {
+      padding: 7px 12px;
+      background: rgba(25, 9, 5, 0.1);
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      transition: background 160ms ease;
+    }
+    .social-links a:hover {
+      background: var(--hero-ink);
+      color: var(--hero-tint);
+    }
+    .colophon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: "Geist Mono", monospace;
+      font-size: 12px;
+      color: var(--hero-ink-soft);
+      border-top: 1px solid rgba(25, 9, 5, 0.18);
+      padding-top: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .colophon a {
+      text-decoration: underline;
+    }
+
+    /* Modal Dialog */
+    dialog.system-modal {
+      background: var(--dark-bg-elev);
+      color: var(--dark-ink);
+      border: 1px solid var(--dark-rule);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 40px 100px -20px rgba(0,0,0,0.8);
+    }
+    dialog.system-modal::backdrop {
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(6px);
+    }
+    dialog.system-modal form {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+    .modal-close-btn {
+      font-family: "Geist Mono", monospace;
+      font-size: 12px;
+      padding: 8px 16px;
+      background: var(--dark-accent);
+      color: #fff;
+      border-radius: var(--radius-sm);
+    }
+  </style>
 </head>
-<body style="background: #0f0b08; color: #fff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
-  <p>Redirecting to <a href="portfolio/index.html" style="color: #e28743;">Sandeep Hipparagi's Portfolio</a>...</p>
+<body>
+  <a class="skip-link" href="#main">skip to content</a>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <header class="hero">
+    <div class="topbar">
+      <div class="topbar-left">
+        <span class="mark"><span class="slash">/</span>sandeep-hipparagi</span>
+        <span class="status-pill"><span class="pulse-dot"></span> Founder @ BluePatterns AI</span>
+      </div>
+      <nav aria-label="primary">
+        <a href="#launch-video">video</a>
+        <a href="#proto-to-prod">transformation</a>
+        <a href="#models">models</a>
+        <a href="#systems">systems</a>
+        <a href="#research">research</a>
+        <a href="#experience">experience</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <div class="topbar-actions">
+        <a class="icon-btn" href="https://github.com/Sandeep-Hipparagi" target="_blank" rel="noopener" aria-label="GitHub Profile" title="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://linkedin.com/in/sandeep-hipparagi/" target="_blank" rel="noopener" aria-label="LinkedIn Profile" title="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://huggingface.co/Sandeep4235" target="_blank" rel="noopener" aria-label="Hugging Face Profile" title="Hugging Face">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5v-3c0-.28.22-.5.5-.5s.5.22.5.5v3zm-4-3c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5zm6 0c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5z"/></svg>
+        </a>
+        <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Toggle theme">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Hero Main -->
+    <div class="hero-main">
+      <div class="hero-body">
+        <p class="hero-tagline"><span>⚡</span> multi-agent architecture · self-healing runtimes</p>
+        <h1 class="hero-headline">i build the systems<br/>behind <span class="emph">production ai.</span></h1>
+        <p class="hero-sub">The routing, state persistence, orchestration, evaluation, and guardrail layers that transform LLMs into <strong>reliable enterprise software</strong>.</p>
+      </div>
+
+      <!-- Hero Interactive Tracer Card -->
+      <aside class="hero-sim-card" id="simulator" aria-label="Interactive State Graph Simulator">
+        <div class="sim-header">
+          <div class="sim-dots">
+            <span class="sim-dot red"></span>
+            <span class="sim-dot yellow"></span>
+            <span class="sim-dot green"></span>
+          </div>
+          <span class="sim-title">aware.ai / runtime-tracer</span>
+          <button id="sim-audio-toggle" class="sim-audio-btn" type="button" aria-pressed="true">
+            <span>🔊</span> <span class="audio-label">sfx: on</span>
+          </button>
+        </div>
+
+        <div class="sim-screen">
+          <div class="sim-query-box">
+            <span class="sim-query-label">Ingested Intent</span>
+            <span class="sim-query-text">"Legal Statutory Audit (BNS-2023)"</span>
+          </div>
+
+          <div class="sim-graph">
+            <div class="sim-step" data-step-num="1" data-state="idle">
+              <span class="step-indicator">1</span>
+              <div class="step-details">
+                <div class="step-name"><span>Gateway Ingestion</span> <span class="step-metric">FastAPI (1.8ms)</span></div>
+                <div class="step-desc">Token auth validated &amp; request decrypted</div>
+              </div>
+            </div>
+
+            <div class="sim-step" data-step-num="2" data-state="idle">
+              <span class="step-indicator">2</span>
+              <div class="step-details">
+                <div class="step-name"><span>Guardrail Filtering</span> <span class="step-metric">OWASP Pass</span></div>
+                <div class="step-desc">PII scrubbed &amp; prompt injection checks clean</div>
+              </div>
+            </div>
+
+            <div class="sim-step" data-step-num="3" data-state="idle">
+              <span class="step-indicator">3</span>
+              <div class="step-details">
+                <div class="step-name"><span>Model Routing</span> <span class="step-metric">Llama3-8b-Wisdom</span></div>
+                <div class="step-desc">3-Stage context pipe (Instruction → Thought → Resp)</div>
+              </div>
+            </div>
+
+            <div class="sim-step" data-step-num="4" data-state="idle">
+              <span class="step-indicator">4</span>
+              <div class="step-details">
+                <div class="step-name"><span>Agent Tool Execution</span> <span class="step-metric">Redis State</span></div>
+                <div class="step-desc">Deterministic state graph invocation &amp; memory sync</div>
+              </div>
+            </div>
+
+            <div class="sim-step" data-step-num="5" data-state="idle">
+              <span class="step-indicator">5</span>
+              <div class="step-details">
+                <div class="step-name"><span>Self-Healing Loop</span> <span class="step-metric">Healer Agent</span></div>
+                <div class="step-desc">Automated schema repair &amp; retry idempotency</div>
+              </div>
+            </div>
+
+            <div class="sim-step" data-step-num="6" data-state="idle">
+              <span class="step-indicator">6</span>
+              <div class="step-details">
+                <div class="step-name"><span>Production Delivery</span> <span class="step-metric">200 OK</span></div>
+                <div class="step-desc">Structured JSON payload verified &amp; emitted</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sim-controls">
+            <button id="sim-run-btn" class="sim-trigger-btn" type="button">▶ Run Normal Trace</button>
+            <button id="sim-fail-btn" class="sim-trigger-btn" style="background: #e28743;" type="button">⚡ Test Fail &amp; Self-Heal</button>
+            <button id="sim-reset-btn" class="sim-reset-btn" type="button">↺ Reset</button>
+          </div>
+          <div style="font-size: 10px; color: var(--dark-ink-dim); text-align: center; margin-top: 4px;">Status: <span id="sim-status-text" style="color: var(--dark-accent);">ready</span></div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Hero Footer -->
+    <div class="hero-foot">
+      <div class="install-stack">
+        <span class="install-label">open-source model · run via Ollama</span>
+        <pre class="install" aria-label="Run Wisdom Model command"><span class="copy-wrap"><button class="copy" type="button" data-copy="ollama run Sandeep4235/llama3-8b-Wisdom-gguf">copy</button></span><code><span class="prompt">$</span> ollama run Sandeep4235/llama3-8b-Wisdom-gguf</code></pre>
+        <span class="install-label">public graph engine · clone</span>
+        <pre class="install" aria-label="Clone NexusGraph command"><span class="copy-wrap"><button class="copy" type="button" data-copy="git clone https://github.com/Sandeep-Hipparagi/NexusGraph">copy</button></span><code><span class="prompt">$</span> git clone https://github.com/Sandeep-Hipparagi/NexusGraph</code></pre>
+        <span class="install-label">sovereign indic voice agent · clone</span>
+        <pre class="install" aria-label="Clone SLNG-AI command"><span class="copy-wrap"><button class="copy" type="button" data-copy="git clone https://github.com/Sandeep-Hipparagi/SLNG-AI">copy</button></span><code><span class="prompt">$</span> git clone https://github.com/Sandeep-Hipparagi/SLNG-AI</code></pre>
+      </div>
+
+      <aside class="hlb-card">
+        <h2 class="hlb-title">The Engineering <em>Philosophy</em></h2>
+        <p class="hlb-copy">The real advantage in enterprise AI is not just the model weights. It is the architecture around them: routing, verification, and deterministic error loops.</p>
+        <ul class="hlb-facts">
+          <li>Zero-downtime routing</li>
+          <li>Self-healing state graphs</li>
+          <li>Governed HitL checkpoints</li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       LAUNCH VIDEO SECTION
+       ============================================================ -->
+  <section class="video-section" id="launch-video" aria-labelledby="video-title">
+    <div class="video-inner">
+      <div class="section-head">
+        <p class="section-eyebrow">prototype → production · the story</p>
+        <h2 class="section-title" id="video-title">the <em>launch video.</em></h2>
+        <p class="section-desc">A condensed overview of architecture-first AI engineering: from brittle probabilistic reasoning to deterministic, self-healing state graphs.</p>
+      </div>
+      <div class="video-card" aria-label="Launch video card">
+        <div class="video-frame">
+          <video id="launch-vid" autoplay muted loop playsinline poster="assets/video/poster.jpg" aria-label="Sandeep Hipparagi profile launch video">
+            <source src="assets/video/brag.mp4" type="video/mp4" />
+          </video>
+          <div class="video-coming-soon" id="video-placeholder-overlay" aria-hidden="true">
+            <span class="coming-soon-label">⬡ launch video · rendering</span>
+            <span class="coming-soon-sub">built with /brag &amp; hyperframes</span>
+          </div>
+        </div>
+        <div class="video-controls">
+          <button id="video-sound-toggle" class="vid-sound-btn" type="button" aria-pressed="false" aria-label="Toggle video sound">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+            <span class="vid-sound-label">tap for sound</span>
+          </button>
+          <span class="video-caption">15–25s architecture story arc</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main id="main">
+
+    <!-- PROTOTYPE -> PRODUCTION VISUAL SECTION -->
+    <section class="section p2p-section" id="proto-to-prod" aria-labelledby="p2p-title">
+      <div class="section-head">
+        <p class="section-eyebrow">the engineering transformation</p>
+        <h2 class="section-title" id="p2p-title">prototype <em>→ production.</em></h2>
+        <p class="section-desc">How BluePatterns AI transitions experimental model research into dependable, enterprise-hardened software systems.</p>
+      </div>
+
+      <dl class="p2p-grid" role="list">
+        <div class="p2p-row" role="listitem">
+          <dt class="p2p-from">Experimental Prompts</dt>
+          <div class="p2p-arrow" aria-hidden="true">→</div>
+          <dd class="p2p-to">Deterministic Multi-Agent State Routing</dd>
+        </div>
+        <div class="p2p-row" role="listitem">
+          <dt class="p2p-from">Brittle Reasoning Flows</dt>
+          <div class="p2p-arrow" aria-hidden="true">→</div>
+          <dd class="p2p-to">Self-Healing Loops &amp; Fallback Runtimes</dd>
+        </div>
+        <div class="p2p-row" role="listitem">
+          <dt class="p2p-from">Undefined Vulnerabilities</dt>
+          <div class="p2p-arrow" aria-hidden="true">→</div>
+          <dd class="p2p-to">OWASP LLM Guardrails &amp; PII Gateways</dd>
+        </div>
+        <div class="p2p-row" role="listitem">
+          <dt class="p2p-from">Black-box Executions</dt>
+          <div class="p2p-arrow" aria-hidden="true">→</div>
+          <dd class="p2p-to">Auditable Human-in-the-Loop (HITL) Checkpoints</dd>
+        </div>
+        <div class="p2p-row" role="listitem">
+          <dt class="p2p-from">Single Demos</dt>
+          <div class="p2p-arrow" aria-hidden="true">→</div>
+          <dd class="p2p-to">Scalable, Containerized Microservices</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- SECTION 1: OPEN-SOURCE MODELS & GGUFS -->
+    <section class="section" id="models" aria-labelledby="models-title">
+      <div class="section-head">
+        <p class="section-eyebrow">fine-tuned weights · low-latency quantization</p>
+        <h2 class="section-title" id="models-title">open-source <em>models.</em></h2>
+        <p class="section-desc">Custom weights fine-tuned with Unsloth QLoRA, engineered with structured reasoning pipelines and distributed as multi-format GGUFs for CPU/GPU inference.</p>
+      </div>
+
+      <div class="spotlight-grid">
+        <!-- Model 1 -->
+        <article class="spotlight-card">
+          <div class="card-top">
+            <span class="card-cmd">llama3-8b-Wisdom</span>
+            <span class="card-badge">83 downloads</span>
+          </div>
+          <p class="card-summary">Fine-tuned Llama-3 8B using Unsloth QLoRA on a curated philosophical corpus. Features a strict 3-stage prompt architecture (<strong>Instruction → Thought → Response</strong>) to prevent conversational drift and hallucination.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">Unsloth QLoRA</span>
+            <span class="tech-pill">GGUF (Q4_K_M, Q5_K_M, Q8_0)</span>
+            <span class="tech-pill">llama.cpp</span>
+            <span class="tech-pill">Model Card Governance</span>
+          </div>
+          <div class="install-stack card-install">
+            <span class="install-label">hugging face release</span>
+            <pre class="install"><span class="copy-wrap"><button class="copy" type="button" data-copy="git clone https://huggingface.co/Sandeep4235/llama3-8b-Wisdom-gguf">copy</button></span><code><span class="prompt">$</span> git clone https://huggingface.co/Sandeep4235/llama3-8b-Wisdom-gguf</code></pre>
+          </div>
+          <div class="card-link-bar">
+            <span>License: Llama-3</span>
+            <a href="https://huggingface.co/Sandeep4235/llama3-8b-Wisdom-gguf" target="_blank" rel="noopener">View Model Card →</a>
+          </div>
+        </article>
+
+        <!-- Model 2 -->
+        <article class="spotlight-card">
+          <div class="card-top">
+            <span class="card-cmd">Qwen3-4B-PromptCraft</span>
+            <span class="card-badge">41 downloads</span>
+          </div>
+          <p class="card-summary">QLoRA fine-tune of Qwen3-4B specifically calibrated for zero-reasoning prompt metaprogramming, tool schema extraction, and structured JSON output under sub-50ms token generation latencies.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">Qwen3-4B Base</span>
+            <span class="tech-pill">GGUF Multi-Quant</span>
+            <span class="tech-pill">Apache-2.0</span>
+            <span class="tech-pill">Tool Calling</span>
+          </div>
+          <div class="install-stack card-install">
+            <span class="install-label">hugging face release</span>
+            <pre class="install"><span class="copy-wrap"><button class="copy" type="button" data-copy="git clone https://huggingface.co/Sandeep4235/Qwen3-4B-PromptCraft-GGUF">copy</button></span><code><span class="prompt">$</span> git clone https://huggingface.co/Sandeep4235/Qwen3-4B-PromptCraft-GGUF</code></pre>
+          </div>
+          <div class="card-link-bar">
+            <span>License: Apache-2.0</span>
+            <a href="https://huggingface.co/Sandeep4235/Qwen3-4B-PromptCraft-GGUF" target="_blank" rel="noopener">View Model Card →</a>
+          </div>
+        </article>
+
+        <!-- Model 3 -->
+        <article class="spotlight-card">
+          <div class="card-top">
+            <span class="card-cmd">llama3-2-lora-wisdom</span>
+            <span class="card-badge">23 downloads</span>
+          </div>
+          <p class="card-summary">Llama-3.2-3B Instruct fine-tuned via Unsloth for compact, low-latency edge deployment on constrained devices. Specializes in philosophical reasoning, ethical dilemmas, and strategic clarity.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">Llama-3.2 3B</span>
+            <span class="tech-pill">Edge AI</span>
+            <span class="tech-pill">Unsloth LoRA</span>
+            <span class="tech-pill">PEFT Safetensors</span>
+          </div>
+          <div class="install-stack card-install">
+            <span class="install-label">hugging face adapter</span>
+            <pre class="install"><span class="copy-wrap"><button class="copy" type="button" data-copy="git clone https://huggingface.co/Sandeep4235/llama3-2-lora-wisdom">copy</button></span><code><span class="prompt">$</span> git clone https://huggingface.co/Sandeep4235/llama3-2-lora-wisdom</code></pre>
+          </div>
+          <div class="card-link-bar">
+            <span>License: Llama-3.2</span>
+            <a href="https://huggingface.co/Sandeep4235/llama3-2-lora-wisdom" target="_blank" rel="noopener">View Model Card →</a>
+          </div>
+        </article>
+
+        <!-- Model 4 -->
+        <article class="spotlight-card">
+          <div class="card-top">
+            <span class="card-cmd">qwen2.5-7b-adapter</span>
+            <span class="card-badge">New Release</span>
+          </div>
+          <p class="card-summary">Qwen2.5-7B Instruct adapter fine-tuned on alpaca-cleaned conversational data using Unsloth QLoRA with 4-bit quantization, optimized for reliable instruction-following microservices.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">Qwen2.5 7B</span>
+            <span class="tech-pill">Alpaca Cleaned</span>
+            <span class="tech-pill">Apache-2.0</span>
+            <span class="tech-pill">PEFT Adapter</span>
+          </div>
+          <div class="install-stack card-install">
+            <span class="install-label">hugging face adapter</span>
+            <pre class="install"><span class="copy-wrap"><button class="copy" type="button" data-copy="git clone https://huggingface.co/Sandeep4235/qwen2.5-7b-adapter">copy</button></span><code><span class="prompt">$</span> git clone https://huggingface.co/Sandeep4235/qwen2.5-7b-adapter</code></pre>
+          </div>
+          <div class="card-link-bar">
+            <span>License: Apache-2.0</span>
+            <a href="https://huggingface.co/Sandeep4235/qwen2.5-7b-adapter" target="_blank" rel="noopener">View Model Card →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 2: FLAGSHIP SYSTEMS GALLERY -->
+    <section class="section" id="systems" aria-labelledby="systems-title">
+      <div class="section-head">
+        <p class="section-eyebrow">production systems · agent coordination</p>
+        <h2 class="section-title" id="systems-title">flagship <em>systems.</em></h2>
+        <p class="section-desc">Architectures designed for resilience: deterministic state graphs, runtime exception fallback loops, and enterprise security guardrails.</p>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn" type="button" data-filter="all" data-active="true">all systems</button>
+        <button class="filter-btn" type="button" data-filter="public" data-active="false">public repositories</button>
+        <button class="filter-btn" type="button" data-filter="agentic" data-active="false">agentic &amp; orchestration</button>
+        <button class="filter-btn" type="button" data-filter="legal" data-active="false">legal &amp; compliance</button>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- System 1: NexusGraph (Public) -->
+        <article class="gallery-card" data-category="public agentic">
+          <div class="gallery-card-top">
+            <span class="gallery-num">01 / GRAPH MEMORY</span>
+            <span class="public-badge">public repo</span>
+          </div>
+          <h3 class="gallery-card-title">NexusGraph</h3>
+          <p class="gallery-card-desc">FalkorDB-native graph engine replacing vector chunking with sparse-matrix GraphBLAS traversal. Features automated FastMCP tools and deterministic traces.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">FalkorDB</span>
+            <span class="tech-pill">FastMCP</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">GraphBLAS</span>
+          </div>
+          <div class="gallery-card-foot">
+            <button class="inspect-btn" type="button" data-inspect="nexusgraph">Inspect Specs</button>
+            <a href="https://github.com/Sandeep-Hipparagi/NexusGraph" target="_blank" rel="noopener">GitHub Repo →</a>
+          </div>
+        </article>
+
+        <!-- System 2: Griffin-R (Public) -->
+        <article class="gallery-card" data-category="public agentic">
+          <div class="gallery-card-top">
+            <span class="gallery-num">02 / INTERVIEWER</span>
+            <span class="public-badge">public repo</span>
+          </div>
+          <h3 class="gallery-card-title">Griffin-R</h3>
+          <p class="gallery-card-desc">Full-stack real-time technical interviewer combining Tavus CVI Digital Human and LiveKit SFU voice pipeline with Pydantic state validation.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">Tavus CVI</span>
+            <span class="tech-pill">LiveKit SFU</span>
+            <span class="tech-pill">Pydantic</span>
+            <span class="tech-pill">FastAPI</span>
+          </div>
+          <div class="gallery-card-foot">
+            <button class="inspect-btn" type="button" data-inspect="griffin">Inspect Specs</button>
+            <a href="https://github.com/Sandeep-Hipparagi/Griffin-R" target="_blank" rel="noopener">GitHub Repo →</a>
+          </div>
+        </article>
+
+        <!-- System 3: SLNG-AI (Public) -->
+        <article class="gallery-card" data-category="public legal">
+          <div class="gallery-card-top">
+            <span class="gallery-num">03 / SOVEREIGN VOICE</span>
+            <span class="public-badge">public repo</span>
+          </div>
+          <h3 class="gallery-card-title">SLNG-AI</h3>
+          <p class="gallery-card-desc">Sovereign Indic Triage &amp; Compliance Voice Agent built with slng-ai/unmute, SLNG Gateway, and Google Gemini 2.5 Flash for statutory cybercrime triage.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">SLNG Voice</span>
+            <span class="tech-pill">Gemini 2.5 Flash</span>
+            <span class="tech-pill">Indic Triage</span>
+            <span class="tech-pill">BNS 2023</span>
+          </div>
+          <div class="gallery-card-foot">
+            <button class="inspect-btn" type="button" data-inspect="slng">Inspect Specs</button>
+            <a href="https://github.com/Sandeep-Hipparagi/SLNG-AI" target="_blank" rel="noopener">GitHub Repo →</a>
+          </div>
+        </article>
+
+        <!-- System 4: Inference-Pareto-Router (Public) -->
+        <article class="gallery-card" data-category="public agentic">
+          <div class="gallery-card-top">
+            <span class="gallery-num">04 / MODEL ROUTER</span>
+            <span class="public-badge">public repo</span>
+          </div>
+          <h3 class="gallery-card-title">Inference-Pareto-Router</h3>
+          <p class="gallery-card-desc">A 2D Model Tier &amp; Reasoning Effort Routing Engine optimizing inference cost, token budget, and task latency across local and frontier models.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Pareto Frontier</span>
+            <span class="tech-pill">Routing</span>
+            <span class="tech-pill">Latency Eval</span>
+          </div>
+          <div class="gallery-card-foot">
+            <button class="inspect-btn" type="button" data-inspect="router">Inspect Specs</button>
+            <a href="https://github.com/Sandeep-Hipparagi/Inference-Pareto-Router" target="_blank" rel="noopener">GitHub Repo →</a>
+          </div>
+        </article>
+
+        <!-- System 5: aegis-core (Public) -->
+        <article class="gallery-card" data-category="public legal">
+          <div class="gallery-card-top">
+            <span class="gallery-num">05 / MCP SECURITY</span>
+            <span class="public-badge">public repo</span>
+          </div>
+          <h3 class="gallery-card-title">aegis-core</h3>
+          <p class="gallery-card-desc">Deterministic zero-trust policy enclave, fail-closed schema validator, DPDP Act 2023 PII sanitizer, and cryptographic WORM audit ledger for MCP tools.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">Model Context Protocol</span>
+            <span class="tech-pill">DPDP Act</span>
+            <span class="tech-pill">PII Sanitizer</span>
+            <span class="tech-pill">Zero-Trust</span>
+          </div>
+          <div class="gallery-card-foot">
+            <button class="inspect-btn" type="button" data-inspect="aegis">Inspect Specs</button>
+            <a href="https://github.com/Sandeep-Hipparagi/aegis-core" target="_blank" rel="noopener">GitHub Repo →</a>
+          </div>
+        </article>
+
+        <!-- System 6: aware.ai (Private) -->
+        <article class="gallery-card" data-category="agentic">
+          <div class="gallery-card-top">
+            <span class="gallery-num">06 / ADAPTIVE INFERENCE</span>
+            <span class="private-badge">private · client work</span>
+          </div>
+          <h3 class="gallery-card-title">aware.ai</h3>
+          <p class="gallery-card-desc">Dual-plane local-first inference gateway with Redis state persistence, active PII masking, and automated exception fallback for enterprise privacy compliance.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">FastAPI</span>
+            <span class="tech-pill">Ollama</span>
+            <span class="tech-pill">Redis</span>
+            <span class="tech-pill">OWASP Gateways</span>
+          </div>
+          <div class="gallery-card-foot">
+            <button class="inspect-btn" type="button" data-inspect="aware">Inspect Architecture</button>
+            <span style="color: var(--dark-ink-dim);">Enterprise Deployment</span>
+          </div>
+        </article>
+
+        <!-- System 7: Universal AI Switchboard (Private) -->
+        <article class="gallery-card" data-category="agentic">
+          <div class="gallery-card-top">
+            <span class="gallery-num">07 / MCP SWITCHBOARD</span>
+            <span class="private-badge">private · client work</span>
+          </div>
+          <h3 class="gallery-card-title">Universal AI Switchboard</h3>
+          <p class="gallery-card-desc">Graph-driven orchestration switchboard connecting swappable MCP tool agents with deterministic self-healing loops and Human-in-the-Loop checkpoints.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">LangGraph</span>
+            <span class="tech-pill">MCP</span>
+            <span class="tech-pill">Self-Healing</span>
+            <span class="tech-pill">HitL Gates</span>
+          </div>
+          <div class="gallery-card-foot">
+            <button class="inspect-btn" type="button" data-inspect="switchboard">Inspect Architecture</button>
+            <span style="color: var(--dark-ink-dim);">Internal Platform</span>
+          </div>
+        </article>
+
+        <!-- System 8: Autonomous QA Agent (Private) -->
+        <article class="gallery-card" data-category="agentic">
+          <div class="gallery-card-top">
+            <span class="gallery-num">08 / SELF-HEALING QA</span>
+            <span class="private-badge">private · client work</span>
+          </div>
+          <h3 class="gallery-card-title">Autonomous QA Agent</h3>
+          <p class="gallery-card-desc">Meta-agent coordinating three decoupled agents (Planner, Generator, Healer) via an event-driven deterministic state graph for automated web test lifecycles.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">LangGraph</span>
+            <span class="tech-pill">FastAPI</span>
+            <span class="tech-pill">Schema Evals</span>
+            <span class="tech-pill">Playwright</span>
+          </div>
+          <div class="gallery-card-foot">
+            <button class="inspect-btn" type="button" data-inspect="qa-agent">Inspect Architecture</button>
+            <span style="color: var(--dark-ink-dim);">Internal Platform</span>
+          </div>
+        </article>
+
+        <!-- System 9: NyayaRakshak (Private) -->
+        <article class="gallery-card" data-category="legal">
+          <div class="gallery-card-top">
+            <span class="gallery-num">09 / LEGAL COMPLIANCE</span>
+            <span class="private-badge">private · client work</span>
+          </div>
+          <h3 class="gallery-card-title">NyayaRakshak</h3>
+          <p class="gallery-card-desc">Statutory cybercrime complaint auditor mapping citizen reports against the Bharatiya Nyaya Sanhita (BNS) 2023 with transactional integrity verification.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">Sarvam AI</span>
+            <span class="tech-pill">Cloud Run</span>
+            <span class="tech-pill">BNS 2023</span>
+            <span class="tech-pill">OCR Pipeline</span>
+          </div>
+          <div class="gallery-card-foot">
+            <button class="inspect-btn" type="button" data-inspect="nyayarakshak">Inspect Architecture</button>
+            <span style="color: var(--dark-ink-dim);">Legal-Tech Solution</span>
+          </div>
+        </article>
+
+        <!-- System 10: CyberGuard 1930 (Private) -->
+        <article class="gallery-card" data-category="legal">
+          <div class="gallery-card-top">
+            <span class="gallery-num">10 / FRAUD DEFENSE</span>
+            <span class="private-badge">private · client work</span>
+          </div>
+          <h3 class="gallery-card-title">CyberGuard 1930</h3>
+          <p class="gallery-card-desc">Voice-first Indic financial fraud portal facilitating real-time voice reporting, automated entity extraction, and cryptographic evidence hash validation.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">Sarvam (Saaras, Bulbul)</span>
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">RBAC</span>
+            <span class="tech-pill">Evidence Hash</span>
+          </div>
+          <div class="gallery-card-foot">
+            <button class="inspect-btn" type="button" data-inspect="cyberguard">Inspect Architecture</button>
+            <span style="color: var(--dark-ink-dim);">Law Enforcement Portal</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 3: RESEARCH & IEEE -->
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="section-head">
+        <p class="section-eyebrow">academic foundations · peer-reviewed publications</p>
+        <h2 class="section-title" id="research-title">research &amp; <em>publications.</em></h2>
+        <p class="section-desc">Bridging academic machine learning research with industrial systems engineering to build transparent, reliable AI architectures.</p>
+      </div>
+
+      <div class="research-card">
+        <span class="research-badge">IEEE Xplore · ICIRCA 2021</span>
+        <h3 class="research-title">Artist Based Video Recommendation System using Machine Learning</h3>
+        <p class="research-citation">
+          <strong>Authors:</strong> Sandeep Sukumar Hipparagi, V. Ramana Murthy Oruganti<br/>
+          <strong>Proceedings:</strong> 2021 Third International Conference on Inventive Research in Computing Applications (ICIRCA), IEEE Xplore.<br/>
+          <strong>Focus:</strong> Computational content-based filtering, feature extraction, and latent preference mapping algorithms.
+        </p>
+        <a class="research-doi-link" href="https://ieeexplore.ieee.org/document/9572793" target="_blank" rel="noopener">
+          <span>Read on IEEE Xplore Digital Library</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <div style="background: var(--dark-bg-elev); border: 1px solid var(--dark-rule); border-radius: var(--radius-md); padding: 24px;">
+        <h4 style="margin: 0 0 12px 0; font-size: 15px; color: var(--dark-ink);">Active Research Areas:</h4>
+        <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: var(--dark-ink-soft); line-height: 1.6;">
+          <li>Multi-agent coordination paradigms, self-healing state graphs, and Human-in-the-Loop verification checkpoints.</li>
+          <li>Developing localization and vernacular reasoning frameworks for open-weight LLMs across Indic languages.</li>
+          <li>Mitigating information inequality in widespread enterprise AI adoption through lightweight edge quantizations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PROFESSIONAL EXPERIENCE -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="section-head">
+        <p class="section-eyebrow">career trajectory · production engineering</p>
+        <h2 class="section-title" id="experience-title">work <em>experience.</em></h2>
+      </div>
+
+      <div class="timeline">
+        <!-- Experience 1 -->
+        <div class="timeline-item">
+          <h3 class="timeline-title">BluePatterns AI — AI/ML Developer &amp; Founder</h3>
+          <div class="timeline-meta">Bengaluru, India · April 2025 – Present</div>
+          <ul class="timeline-bullets">
+            <li>Architected and deployed <strong>aware.ai</strong>, an adaptive multi-agent inference layer featuring automated exception fallback logic and self-healing state-recovery loops for enterprise workflows.</li>
+            <li>Built long-running agent execution pipelines using <strong>OpenClaw</strong> and <strong>LangGraph</strong> capable of multi-step autonomous reasoning and scheduled background execution.</li>
+            <li>Designed strict, idempotent JSON schemas and tool definitions for agent tool-calling, enabling safe third-party SaaS integrations and enterprise multi-tenancy controls.</li>
+            <li>Engineered pre-deployment evaluation pipelines to measure prompt resilience, structural output drift, and agent logic stability with safe rollback capabilities.</li>
+          </ul>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item">
+          <h3 class="timeline-title">Tata Consultancy Services (TCS) — Senior System Engineer</h3>
+          <div class="timeline-meta">Bengaluru, India · Dec 2022 – May 2025</div>
+          <ul class="timeline-bullets">
+            <li>Built and maintained enterprise-grade Python microservices, data pipelines, and transactional layers using PostgreSQL and Redis under mission-critical SLAs.</li>
+            <li>Engineered secure third-party API connector frameworks managing OAuth flows, high-concurrency rate limiting, and defensive data validation mechanisms.</li>
+            <li>Managed production observability (SigNoz, Datadog), driving down API latency through automated query optimization, strategic database indexing, and retry semantics.</li>
+            <li>Refactored legacy batch architectures into robust state-managed workflows, minimizing transactional failure rates during unexpected downtime.</li>
+          </ul>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="timeline-item">
+          <h3 class="timeline-title">National Institute of Technology (NIT), Tiruchirappalli — Engineer Intern</h3>
+          <div class="timeline-meta">Tiruchirappalli, India · 2020 – 2021</div>
+          <ul class="timeline-bullets">
+            <li>Conducted foundational engineering research and collaborated on machine learning problem-solving within applied academic and computational frameworks.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: EDUCATION & CREDENTIALS -->
+    <section class="section" id="credentials" aria-labelledby="credentials-title">
+      <div class="section-head">
+        <p class="section-eyebrow">education &amp; verified certifications</p>
+        <h2 class="section-title" id="credentials-title">education &amp; <em>credentials.</em></h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px;">
+        <div style="background: var(--dark-bg-elev); border: 1px solid var(--dark-rule); border-radius: var(--radius-md); padding: 20px;">
+          <h4 style="margin: 0 0 6px 0; font-size: 15px; color: var(--dark-ink);">Master's Degree</h4>
+          <p style="margin: 0; font-size: 13px; color: var(--dark-ink-soft);">Amrita Vishwa Vidyapeetham, Coimbatore</p>
+        </div>
+        <div style="background: var(--dark-bg-elev); border: 1px solid var(--dark-rule); border-radius: var(--radius-md); padding: 20px;">
+          <h4 style="margin: 0 0 6px 0; font-size: 15px; color: var(--dark-ink);">Bachelor's Degree</h4>
+          <p style="margin: 0; font-size: 13px; color: var(--dark-ink-soft);">KLE Institute of Technology, Hubli</p>
+        </div>
+      </div>
+
+      <div class="certs-grid">
+        <div class="cert-card">
+          <span class="cert-name">Google AI Essentials</span>
+          <span class="cert-issuer">Coursera · Aug 2024</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-name">Prompt Engineering for Generative AI</span>
+          <span class="cert-issuer">LinkedIn · Jul 2024</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-name">Databases &amp; SQL for Data Science (Honors)</span>
+          <span class="cert-issuer">IBM · Jan 2023</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-name">ETL: Extract, Transform and Load Data</span>
+          <span class="cert-issuer">CertNexus · Jun 2022</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-name">AWS Machine Learning</span>
+          <span class="cert-issuer">Coursera · May 2021</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-name">Machine Learning (Stanford University)</span>
+          <span class="cert-issuer">Coursera · Apr 2021</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px; font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--dark-ink-dim);">
+        Verify verified badges on <a href="https://www.credly.com/users/sandeep-sukumar-hipparagi" target="_blank" rel="noopener" style="color: var(--dark-accent); text-decoration: underline;">Credly</a> · Coding problem-solving on <a href="https://www.hackerrank.com/sandeeph1537" target="_blank" rel="noopener" style="color: var(--dark-accent); text-decoration: underline;">HackerRank</a>.
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       OUTRO / CONTACT FOOTER
+       ============================================================ -->
+  <footer class="outro" id="contact">
+    <div class="outro-inner">
+      <h2 class="outro-headline">let's build <em>reliable</em> ai.</h2>
+      <div class="outro-grid">
+        <p class="outro-copy">
+          Open for enterprise AI architecture engagements, faculty &amp; research collaborations, and production infrastructure design.<br/><br/>
+          <strong>Available for conversations worldwide.</strong>
+        </p>
+        <div class="outro-actions">
+          <a class="btn-primary" href="mailto:hipparagi95@gmail.com">
+            <span>✉ Get in touch: hipparagi95@gmail.com</span>
+          </a>
+          <div class="social-links">
+            <a href="https://bluepatterns.ai/" target="_blank" rel="noopener">BluePatterns AI</a>
+            <a href="https://linkedin.com/in/sandeep-hipparagi/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/Sandeep-Hipparagi" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://huggingface.co/Sandeep4235" target="_blank" rel="noopener">Hugging Face</a>
+            <a href="https://twitter.com/hipparagi_here" target="_blank" rel="noopener">X (Twitter)</a>
+            <a href="https://sandeephipparagi.blogspot.com/" target="_blank" rel="noopener">Blog</a>
+          </div>
+        </div>
+      </div>
+      <div class="colophon">
+        <span>© 2026 Sandeep Hipparagi. All rights reserved.</span>
+        <span>made with <a href="https://github.com/latent-spaces/brag" target="_blank" rel="noopener">/brag</a> · inspired by the <a href="https://latent-spaces.github.io/brag/" target="_blank" rel="noopener">/brag launch site</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- System Inspection Modal -->
+  <dialog class="system-modal" id="system-inspect-modal" aria-labelledby="modal-title">
+    <h3 id="modal-title" style="margin: 0 0 16px 0; font-size: 18px; color: var(--dark-ink);">System Details</h3>
+    <div id="modal-body" style="font-size: 14px; color: var(--dark-ink-soft); line-height: 1.55;"></div>
+    <form method="dialog">
+      <button class="modal-close-btn" type="submit">Close</button>
+    </form>
+  </dialog>
+
+  <!-- ============================================================
+       INLINE JS (Audio, Simulator, Filter, Modals, Copy, Video)
+       ============================================================ -->
+  <script>
+    (() => {
+      // 1. Web Audio Context for Tactile Micro-Sounds
+      let audioCtx = null;
+      let soundEnabled = true;
+
+      const initAudio = () => {
+        if (!audioCtx && (window.AudioContext || window.webkitAudioContext)) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx && audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+      };
+
+      const playClick = (freq = 800, type = 'sine', duration = 0.04) => {
+        if (!soundEnabled) return;
+        try {
+          initAudio();
+          if (!audioCtx) return;
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + duration);
+        } catch (e) {}
+      };
+
+      const audioToggleBtn = document.getElementById('sim-audio-toggle');
+      if (audioToggleBtn) {
+        audioToggleBtn.addEventListener('click', () => {
+          soundEnabled = !soundEnabled;
+          audioToggleBtn.setAttribute('aria-pressed', soundEnabled ? 'true' : 'false');
+          const label = audioToggleBtn.querySelector('.audio-label');
+          if (label) label.textContent = soundEnabled ? 'sfx: on' : 'sfx: off';
+          if (soundEnabled) playClick(1200, 'triangle', 0.05);
+        });
+      }
+
+      // 2. Light / Dark Theme Toggle
+      const themeToggleBtn = document.getElementById('theme-toggle-btn');
+      const initialTheme = localStorage.getItem('theme') || 'dark';
+
+      const applyTheme = (theme) => {
+        document.documentElement.classList.remove('dark', 'light');
+        document.documentElement.classList.add(theme);
+        try { localStorage.setItem('theme', theme); } catch (e) {}
+      };
+      applyTheme(initialTheme);
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const isDark = document.documentElement.classList.contains('dark');
+          const next = isDark ? 'light' : 'dark';
+          playClick(isDark ? 1100 : 750, 'sine', 0.04);
+          applyTheme(next);
+        });
+      }
+
+      // 3. Interactive Agent Dispatch & Self-Healing Simulator
+      const simSteps = document.querySelectorAll('.sim-step');
+      const simRunBtn = document.getElementById('sim-run-btn');
+      const simFailBtn = document.getElementById('sim-fail-btn');
+      const simResetBtn = document.getElementById('sim-reset-btn');
+      const simStatus = document.getElementById('sim-status-text');
+      let simTimer = null;
+      let isRunning = false;
+
+      const resetSimulator = () => {
+        if (simTimer) clearTimeout(simTimer);
+        isRunning = false;
+        simSteps.forEach(step => {
+          step.dataset.state = 'idle';
+          const ind = step.querySelector('.step-indicator');
+          if (ind) ind.textContent = step.dataset.stepNum || '•';
+        });
+        if (simStatus) simStatus.textContent = 'ready';
+        if (simRunBtn) simRunBtn.disabled = false;
+        if (simFailBtn) simFailBtn.disabled = false;
+      };
+
+      const runSimulation = (mode = 'normal') => {
+        if (isRunning) return;
+        isRunning = true;
+        if (simRunBtn) simRunBtn.disabled = true;
+        if (simFailBtn) simFailBtn.disabled = true;
+        initAudio();
+
+        const sequence = [
+          { step: 0, delay: 0, sound: 600, label: 'Ingesting intent...' },
+          { step: 1, delay: 500, sound: 800, label: 'PII guardrails verified...' },
+          { step: 2, delay: 1100, sound: 1000, label: 'Model routing calibrated...' },
+          { 
+            step: 3, 
+            delay: 1700, 
+            sound: mode === 'fail-repair' ? 300 : 1200, 
+            label: mode === 'fail-repair' ? 'Simulating node timeout...' : 'Executing reasoning loop...',
+            isRepair: mode === 'fail-repair'
+          },
+          { step: 4, delay: mode === 'fail-repair' ? 2400 : 2200, sound: 1400, label: 'Self-healing state recovery applied!' },
+          { step: 5, delay: mode === 'fail-repair' ? 3000 : 2700, sound: 1600, label: '200 OK — Delivery complete.' }
+        ];
+
+        sequence.forEach(({ step, delay, sound, label, isRepair }, index) => {
+          setTimeout(() => {
+            if (!isRunning) return;
+            if (simStatus) simStatus.textContent = label;
+            playClick(sound, isRepair ? 'sawtooth' : 'sine', isRepair ? 0.08 : 0.04);
+
+            if (step > 0) {
+              const prev = simSteps[step - 1];
+              if (prev) {
+                prev.dataset.state = prev.dataset.state === 'repair' ? 'repair' : 'success';
+                const ind = prev.querySelector('.step-indicator');
+                if (ind) ind.textContent = '✓';
+              }
+            }
+
+            const curr = simSteps[step];
+            if (curr) {
+              curr.dataset.state = isRepair ? 'repair' : 'active';
+              const ind = curr.querySelector('.step-indicator');
+              if (ind) ind.textContent = isRepair ? '!' : '...';
+            }
+
+            if (index === sequence.length - 1) {
+              setTimeout(() => {
+                curr.dataset.state = 'success';
+                const ind = curr.querySelector('.step-indicator');
+                if (ind) ind.textContent = '✓';
+                if (simStatus) simStatus.textContent = mode === 'fail-repair' ? 'Self-healed & executed' : 'Execution complete';
+                playClick(1800, 'triangle', 0.1);
+                isRunning = false;
+                if (simRunBtn) simRunBtn.disabled = false;
+                if (simFailBtn) simFailBtn.disabled = false;
+              }, 500);
+            }
+          }, delay);
+        });
+      };
+
+      if (simRunBtn) simRunBtn.addEventListener('click', () => { resetSimulator(); runSimulation('normal'); });
+      if (simFailBtn) simFailBtn.addEventListener('click', () => { resetSimulator(); runSimulation('fail-repair'); });
+      if (simResetBtn) simResetBtn.addEventListener('click', () => { resetSimulator(); playClick(500, 'sine', 0.03); });
+
+      // 4. Copy to Clipboard
+      document.querySelectorAll('.copy[data-copy]').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const text = btn.dataset.copy || '';
+          try {
+            await navigator.clipboard.writeText(text);
+          } catch (e) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+          }
+          playClick(1400, 'sine', 0.05);
+          btn.dataset.state = 'copied';
+          const orig = btn.textContent;
+          btn.textContent = 'copied';
+          setTimeout(() => {
+            btn.dataset.state = '';
+            btn.textContent = orig;
+          }, 1600);
+        });
+      });
+
+      // 5. Category Filtering
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const galleryCards = document.querySelectorAll('.gallery-card');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          playClick(900, 'sine', 0.03);
+          filterBtns.forEach(b => b.dataset.active = 'false');
+          btn.dataset.active = 'true';
+          const filter = btn.dataset.filter || 'all';
+          galleryCards.forEach(card => {
+            const cats = card.dataset.category || '';
+            if (filter === 'all' || cats.includes(filter)) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 6. Systems Inspection Modal
+      const modal = document.getElementById('system-inspect-modal');
+      const modalTitle = document.getElementById('modal-title');
+      const modalBody = document.getElementById('modal-body');
+
+      const systemDetails = {
+        'nexusgraph': {
+          title: 'NexusGraph — Graph-Native AI Memory',
+          body: '<p><strong>Architecture:</strong> FalkorDB sparse-matrix core with GraphBLAS backend.</p><p><strong>Interoperability:</strong> Model Context Protocol (FastMCP) native tool server exposing sub-millisecond graph queries.</p><p><strong>Reliability:</strong> Preserves deterministic audit traces across multi-agent workflows.</p>'
+        },
+        'griffin': {
+          title: 'Griffin-R — Technical Interviewer Dashboard',
+          body: '<p><strong>Architecture:</strong> Real-time video/audio streaming with Tavus CVI Digital Human and LiveKit SFU.</p><p><strong>State Control:</strong> Pydantic structured schemas guarantee compliant state transitions and candidate evaluation notes.</p>'
+        },
+        'slng': {
+          title: 'SLNG-AI — Sovereign Indic Triage Voice Agent',
+          body: '<p><strong>Architecture:</strong> slng-ai/unmute streaming voice gateway connected to Google Gemini 2.5 Flash.</p><p><strong>Compliance:</strong> Statutory legal mapping against Bharatiya Nyaya Sanhita (BNS) 2023 for cybercrime triage.</p>'
+        },
+        'router': {
+          title: 'Inference-Pareto-Router — 2D Effort Engine',
+          body: '<p><strong>Concept:</strong> Calculates the Pareto optimal frontier balancing task reasoning depth against token latency.</p><p><strong>Outcome:</strong> Routes simple queries to localized quantizations while escalating complex logic to frontier models.</p>'
+        },
+        'aegis': {
+          title: 'aegis-core — MCP Security Enclave',
+          body: '<p><strong>Enclave:</strong> Zero-trust policy enforcement for Model Context Protocol tools.</p><p><strong>Governance:</strong> India DPDP Act 2023 PII sanitization and immutable append-only WORM audit ledgers.</p>'
+        },
+        'aware': {
+          title: 'aware.ai — Adaptive Multi-Agent Inference',
+          body: '<p><strong>Architecture:</strong> FastAPI + Ollama dual-plane inference gateway with Redis-backed state persistence.</p><p><strong>Guardrails:</strong> In-flight PII masking and active hallucination filtering pipelines before context hits the model.</p><p><strong>Status:</strong> Private enterprise client infrastructure.</p>'
+        },
+        'switchboard': {
+          title: 'Universal AI Switchboard — Graph-Driven MCP',
+          body: '<p><strong>Engineering:</strong> Runtime failures are captured as state updates and rerouted through deterministic self-healing loops rather than crashing.</p><p><strong>Governance:</strong> Least-privilege token scoping and mandatory Human-in-the-Loop (HitL) approval gates.</p><p><strong>Status:</strong> Private enterprise client infrastructure.</p>'
+        },
+        'qa-agent': {
+          title: 'Autonomous QA Agent — Self-Healing Test Lifecycle',
+          body: '<p><strong>Coordination:</strong> Orchestrates Planner, Generator, and Healer agents via an event-driven deterministic state graph.</p><p><strong>Status:</strong> Private client infrastructure.</p>'
+        },
+        'nyayarakshak': {
+          title: 'NyayaRakshak — BNS 2023 Statutory Auditor',
+          body: '<p><strong>Auditing:</strong> Validates citizen complaints against Indian statutory frameworks (BNS 2023) using the Sarvam stack.</p><p><strong>Status:</strong> Private legal-tech client deployment.</p>'
+        },
+        'cyberguard': {
+          title: 'CyberGuard 1930 — Indic Financial Fraud Portal',
+          body: '<p><strong>Voice First:</strong> Multilingual Indic voice reporting powered by Sarvam AI (Saaras, Bulbul).</p><p><strong>Status:</strong> Private law enforcement client deployment.</p>'
+        }
+      };
+
+      document.querySelectorAll('[data-inspect]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const key = btn.dataset.inspect;
+          const data = systemDetails[key];
+          if (data && modal) {
+            modalTitle.textContent = data.title;
+            modalBody.innerHTML = data.body;
+            playClick(1000, 'sine', 0.04);
+            modal.showModal();
+          }
+        });
+      });
+
+      // 7. Video Sound Toggle & Placeholder Handling
+      const videoEl = document.getElementById('launch-vid');
+      const vidSoundBtn = document.getElementById('video-sound-toggle');
+      const vidOverlay = document.getElementById('video-placeholder-overlay');
+
+      if (videoEl) {
+        const hideOverlay = () => { if (vidOverlay) vidOverlay.style.display = 'none'; };
+        videoEl.addEventListener('playing', hideOverlay);
+        videoEl.addEventListener('canplay', hideOverlay);
+        if (!videoEl.paused) hideOverlay();
+      }
+
+      if (vidSoundBtn && videoEl) {
+        vidSoundBtn.addEventListener('click', () => {
+          videoEl.muted = !videoEl.muted;
+          const isMuted = videoEl.muted;
+          vidSoundBtn.setAttribute('aria-pressed', isMuted ? 'false' : 'true');
+          const lbl = vidSoundBtn.querySelector('.vid-sound-label');
+          if (lbl) lbl.textContent = isMuted ? 'tap for sound' : 'mute';
+          playClick(isMuted ? 600 : 1200, 'sine', 0.04);
+        });
+      }
+
+    })();
+  </script>
 </body>
 </html>
-

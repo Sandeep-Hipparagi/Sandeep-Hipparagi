@@ -1,0 +1,17 @@
+# Sandeep Hipparagi — Sandeep-Hipparagi profile repo
+# Phase 5 / brag video intermediates
+brag-output/composition/
+brag-output/*.mov
+brag-output/*.mkv
+*.mov
+
+# Node
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
