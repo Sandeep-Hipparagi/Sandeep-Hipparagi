@@ -12,9 +12,7 @@
   <a href="https://sandeephipparagi.blogspot.com/"><img src="https://img.shields.io/badge/Blog-FF5722?style=for-the-badge&logo=blogger&logoColor=white" alt="Blog" /></a>
 </p>
 
-<a href="https://sandeep-hipparagi.github.io/Sandeep-Hipparagi/"><img src="portfolio/hero.png" alt="Sandeep Hipparagi portfolio site — AI Systems & Research" /></a>
-
-<!-- launch video preview — added in Phase 5 -->
+<a href="https://sandeep-hipparagi.github.io/Sandeep-Hipparagi/"><img src="assets/launch-preview.gif" alt="Sandeep Hipparagi — Production AI Launch Video Preview" width="720" /></a>
 
 </div>
 

@@ -1503,7 +1503,7 @@
       </div>
       <div class="video-card" aria-label="Launch video card">
         <div class="video-frame">
-          <video id="launch-vid" muted loop playsinline poster="assets/video/poster.jpg" aria-label="Sandeep Hipparagi profile launch video">
+          <video id="launch-vid" autoplay muted loop playsinline poster="assets/video/poster.jpg" aria-label="Sandeep Hipparagi profile launch video">
             <source src="assets/video/brag.mp4" type="video/mp4" />
           </video>
           <div class="video-coming-soon" id="video-placeholder-overlay" aria-hidden="true">
@@ -2319,10 +2319,10 @@
       const vidOverlay = document.getElementById('video-placeholder-overlay');
 
       if (videoEl) {
-        // If video successfully loads and plays, hide placeholder overlay
-        videoEl.addEventListener('playing', () => {
-          if (vidOverlay) vidOverlay.style.display = 'none';
-        });
+        const hideOverlay = () => { if (vidOverlay) vidOverlay.style.display = 'none'; };
+        videoEl.addEventListener('playing', hideOverlay);
+        videoEl.addEventListener('canplay', hideOverlay);
+        if (!videoEl.paused) hideOverlay();
       }
 
       if (vidSoundBtn && videoEl) {

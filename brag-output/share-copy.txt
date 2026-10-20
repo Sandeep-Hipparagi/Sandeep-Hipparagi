@@ -1,0 +1,6 @@
+"The real advantage in AI is not just the model. It is the architecture around it."
+
+Moving past brittle probabilistic prototypes into deterministic, self-healing multi-agent runtimes and enterprise LLM infrastructure.
+
+Explore the live portfolio & flagship systems: https://sandeep-hipparagi.github.io/Sandeep-Hipparagi/
+#AI #MultiAgentSystems #ProductionAI #LangGraph #MCP #LLM
