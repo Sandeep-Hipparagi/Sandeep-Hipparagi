@@ -73,7 +73,7 @@ I design and build the systems behind production-grade AI — the routing, state
 - **BluePatterns AI** — *AI/ML Developer & Founder* (Apr 2025 – Present) · Multi-agent inference runtimes, self-healing state graphs, enterprise LLM evals.
 - **Tata Consultancy Services (TCS)** — *Senior System Engineer* (Dec 2022 – May 2025) · Enterprise Python microservices, PostgreSQL/Redis transaction pipelines.
 - **NIT Tiruchirappalli** — *Engineer Intern* (2020 – 2021) · Applied machine learning and computational research.
-- **IEEE Published Research**: [*Artist Based Video Recommendation System using Machine Learning*](https://ieeexplore.ieee.org/document/9572793) (ICIRCA 2021).
+- **IEEE Published Research**: [*Artist Based Video Recommendation System using Machine Learning*](https://ieeexplore.ieee.org/document/9544976) (ICIRCA 2021).
 
 ---
 
@@ -83,9 +83,3 @@ I design and build the systems behind production-grade AI — the routing, state
 - 🧩 **Enterprise AI Architecture**: Multi-agent system orchestration, local-first inference, and production deployment
 - 🛡️ **AI Safety & Evals**: LLM guardrail implementation, benchmark harness design, and self-healing state graphs
 - 🌐 **Domain Specializations**: Legal-tech AI (Indic/BNS compliance), cyber fraud defense, and personalized educational systems
-
----
-
-<div align="center">
-<sub>made with <a href="https://github.com/latent-spaces/brag">/brag</a> · inspired by the <a href="https://latent-spaces.github.io/brag/">/brag launch site</a></sub>
-</div>
