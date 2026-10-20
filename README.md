@@ -1,158 +1,81 @@
 <div align="center">
 
 # Sandeep Hipparagi
-### AI/ML Developer • Researcher • Founder • BluePatterns AI
-### Multi-Agent Systems • Self-Healing Architectures • Production LLM Infrastructure
+### AI/ML Developer · Researcher · Founder, BluePatterns AI
+### Multi-Agent Systems · Self-Healing Architectures · Production LLM Infrastructure
 
 <p align="center">
-  <a href="https://sandeep-hipparagi.github.io/Sandeep-Hipparagi/"><img src="https://img.shields.io/badge/Live%20Launchpad-FF7B54?style=for-the-badge&logo=rocket&logoColor=white" alt="Live Launchpad" /></a>
+  <a href="https://bluepatterns.ai/"><img src="https://img.shields.io/badge/BluePatterns%20AI-007ACC?style=for-the-badge&logo=google-chrome&logoColor=white" alt="BluePatterns AI" /></a>
   <a href="https://linkedin.com/in/sandeep-hipparagi/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://github.com/Sandeep-Hipparagi"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="https://huggingface.co/Sandeep4235"><img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face" /></a>
-  <a href="https://twitter.com/hipparagi_here"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter" /></a>
-  <a href="https://bluepatterns.ai/"><img src="https://img.shields.io/badge/Website-007ACC?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website" /></a>
+  <a href="https://twitter.com/hipparagi_here"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X (Twitter)" /></a>
   <a href="https://sandeephipparagi.blogspot.com/"><img src="https://img.shields.io/badge/Blog-FF5722?style=for-the-badge&logo=blogger&logoColor=white" alt="Blog" /></a>
-  <a href="https://www.credly.com/users/sandeep-sukumar-hipparagi"><img src="https://img.shields.io/badge/Credly-FF6B00?style=for-the-badge&logo=credly&logoColor=white" alt="Credly" /></a>
-  <a href="https://www.hackerrank.com/sandeeph1537"><img src="https://img.shields.io/badge/HackerRank-00EA64?style=for-the-badge&logo=hackerrank&logoColor=black" alt="HackerRank" /></a>
-  <a href="mailto:hipparagi95@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Sandeep-Hipparagi&label=Profile%20Views&color=ff7b54&style=flat-square" alt="Profile Views" />
-</p>
+<a href="https://sandeep-hipparagi.github.io/Sandeep-Hipparagi/"><img src="portfolio/hero.png" alt="Sandeep Hipparagi portfolio site — AI Systems & Research" /></a>
 
-[![Sandeep Hipparagi launch site](portfolio/hero.png)](https://sandeep-hipparagi.github.io/Sandeep-Hipparagi/portfolio/index.html)
+<!-- launch video preview — added in Phase 5 -->
 
 </div>
 
 ---
 
-## 🎯 Mission & Engineering Philosophy
-
 > *"The real advantage in AI is not just the model. It is the architecture around it."*
 
 I design and build the systems behind production-grade AI — the routing, state persistence, orchestration, evaluation, and guardrail layers that transform experimental intelligence into dependable software for real users.
 
-With a background spanning **IEEE-published research**, **enterprise systems engineering at TCS**, and **founding BluePatterns AI**, my work focuses on bridging academic theory with robust industrial engineering practices.
+---
+
+## Prototype → Production
+
+<table>
+<thead><tr><th>From (Prototype)</th><th>→</th><th>To (Production)</th></tr></thead>
+<tbody>
+<tr><td>Experimental Prompts</td><td>→</td><td>Deterministic Multi-Agent State Routing</td></tr>
+<tr><td>Brittle Reasoning Flows</td><td>→</td><td>Self-Healing Loops &amp; Fallback Runtimes</td></tr>
+<tr><td>Undefined Vulnerabilities</td><td>→</td><td>OWASP LLM Guardrails &amp; PII Gateways</td></tr>
+<tr><td>Black-box Executions</td><td>→</td><td>Auditable Human-in-the-Loop (HITL) Checkpoints</td></tr>
+<tr><td>Single Demos</td><td>→</td><td>Scalable, Containerized Microservices</td></tr>
+</tbody>
+</table>
 
 ---
 
-## 🛠️ Core Technology Stack
+## Flagship Systems
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=py,ts,fastapi,docker,postgres,redis,linux,gcp,git,github,nodejs" alt="Core Stack" />
-</p>
-
-| Domain | Technologies & Frameworks |
-| :--- | :--- |
-| **Agentic & Resilient Systems** | Multi-Agent Coordination, LangGraph, OpenClaw, Model Context Protocol (MCP), Self-Healing Runtimes, State Graphs, Human-in-the-Loop (HITL), Retry Semantics, Idempotent Tooling |
-| **LLMs & Fine-Tuning** | Llama-3, Qwen, Unsloth QLoRA, LoRA adapters, GGUF Quantization, `llama.cpp`, Ollama, Sarvam AI Stack (Aarya, Akshar, Saaras, Bulbul), Prompt Metaprogramming |
-| **Backend & Systems** | Python, TypeScript, FastAPI, RESTful Microservices, SaaS API Integrations, OAuth Flows, High-Availability SLA Architecture |
-| **Data & Storage** | PostgreSQL, Redis (State Persistence & Caching), FalkorDB, Vector Databases, Hybrid Search, Strategic Chunking, RAG Optimization |
-| **Observability & Reliability** | SigNoz, Datadog, OWASP LLM Top 10 Mitigations, PII Masking, Hallucination Gates, Pre-deployment Evals, Docker, Cloud Run |
-
----
-
-## 🚀 Flagship Systems & Open-Source Highlights
-
-```text
-From Prototype to Production AI:
-
-Experimental Prompts     →   Deterministic Multi-Agent State Routing
-Brittle Reasoning Flows  →   Self-Healing Loops & Fallback Runtimes
-Undefined Vulnerabilities →   OWASP LLM Guardrails & PII Gateways
-Black-box Executions     →   Auditable Human-in-the-Loop (HITL) Checkpoints
-Single Demos             →   Scalable, Containerized Microservices
-```
-
-### 🧠 Recent Public Repos
-
-| Project | Focus | Description |
-| :--- | :--- | :--- |
-| **[SLNG-AI](https://github.com/Sandeep-Hipparagi/SLNG-AI)** | Sovereign Indic Triage & Compliance Voice Agent | A public AI voice agent built with `slng-ai/unmute`, the SLNG Sovereign Speech Gateway, and Google Gemini Flash for triage and compliance workflows. |
-| **[NexusGraph](https://github.com/Sandeep-Hipparagi/NexusGraph)** | Autonomous SRE & Company Brain | Deterministic multi-hop FalkorDB graph traversal, FastMCP tools, and explainable mission-control UI for incident triage and organizational memory. |
-| **[Griffin-R](https://github.com/Sandeep-Hipparagi/Griffin-R)** | Tavus Digital Human & LiveKit Interviewer | Real-time interviewer dashboard combining Tavus CVI digital human and LiveKit audio SFU with voice pipeline agents and structured Pydantic outputs. |
-
-### 🧠 Model Releases & Fine-Tuning
-
-| Project | Platform | Description |
-| :--- | :--- | :--- |
-| **[llama3-8b-Wisdom](https://huggingface.co/Sandeep4235)** | Hugging Face • GGUF | Specialized Llama-3 8B fine-tuned with Unsloth QLoRA on a curated philosophical dataset. Implements a 3-stage prompt architecture for deterministic thought routing. |
-| **[Qwen3-4B-PromptCraft](https://huggingface.co/Sandeep4235)** | Hugging Face • GitHub | Zero-reasoning prompt engineering model fine-tuned on synthetic instruction pairs. Designed to suppress internal chain-of-thought tokens when deterministic responses are required. |
-| **[llama3-2-lora-wisdom](https://huggingface.co/Sandeep4235/llama3-2-lora-wisdom)** | Hugging Face • LoRA | Llama-3 2B LoRA weights tuned for concise, citation-first summarization and low-latency on-device inference. |
-| **[qwen2.5-7b-adapter](https://huggingface.co/Sandeep4235/qwen2.5-7b-adapter)** | Hugging Face • Adapter | Adapter weights for Qwen 2.5 (7B) that inject compliance-aware templates and token-level suppression for hallucination control. |
-
-### ⚡ Agentic Orchestration & Production AI Systems
-
-| Project | Architecture & Focus | Key Capabilities |
-| :--- | :--- | :--- |
-| **Aware.ai** | Multi-Agent Inference Router | Dual-plane inference gateway (FastAPI + Ollama) with Redis-backed state management, dynamic guardrails (PII masking, hallucination filtering), automated health checks. |
-| **SLNG-AI** | Sovereign Voice + Triage AI | Voice-first workflow orchestration using SLNG Sovereign Speech Gateway and Gemini 2.5 Flash for Indic compliance, triage, and task execution. |
-| **Universal AI Switchboard** | Graph-Driven MCP Orchestration | Decoupled generative AI architecture connected via Model Context Protocol (MCP). Features self-healing error loops, least-privilege model switching, and tool-call idempotency. |
-| **Autonomous QA Agent** | Self-Healing Test Lifecycle | End-to-end meta-agent executing web testing via a deterministic state graph coordinating Planner, Generator, and Healer sub-agents. |
-| **NyayaRakshak** | Legal Complaint Auditor | Deployed on Google Cloud Run utilizing the Sarvam AI stack (Aarya, Akshar) to audit and validate complaints against Indian statutory frameworks. |
-| **CyberGuard 1930** | Voice-First Fraud Reporting | TypeScript and Sarvam AI (Saaras, Bulbul) portal facilitating voice-first cybercrime and financial fraud reporting across Indic languages. |
-| **NexusGraph** | Connected Systems & Company Brain | FalkorDB-native graph traversal, explainable traces, and automated FastMCP tools for actionable incident responses. |
-| **Griffin-R** | Interviewer Dashboard | Tavus CVI + LiveKit real-time interviewer, voice pipeline agents, and structured Pydantic outputs for hiring workflows. |
-| **A3H Harness** | Reliability & Eval Framework | Comprehensive benchmark and evaluation harness measuring prompt resilience, structural output drift, schema compliance, and agent logic prior to deployment. |
+| Project | Focus | Description / Outcome | Link |
+| :--- | :--- | :--- | :--- |
+| **[SLNG-AI](https://github.com/Sandeep-Hipparagi/SLNG-AI)** | Indic Voice Agent | Sovereign Indic Triage & Compliance Voice Agent with Gemini 2.5 Flash | [GitHub](https://github.com/Sandeep-Hipparagi/SLNG-AI) |
+| **[NexusGraph](https://github.com/Sandeep-Hipparagi/NexusGraph)** | Connected Graph Brain | FalkorDB-native graph traversal, traces, and FastMCP tooling | [GitHub](https://github.com/Sandeep-Hipparagi/NexusGraph) |
+| **[Griffin-R](https://github.com/Sandeep-Hipparagi/Griffin-R)** | Interviewer Dashboard | Tavus CVI + LiveKit real-time interviewer with Pydantic validation | [GitHub](https://github.com/Sandeep-Hipparagi/Griffin-R) |
+| **[Inference-Pareto-Router](https://github.com/Sandeep-Hipparagi/Inference-Pareto-Router)** | LLM Routing Engine | 2D Model Tier & Reasoning Effort Routing Engine | [GitHub](https://github.com/Sandeep-Hipparagi/Inference-Pareto-Router) |
+| **[aegis-core](https://github.com/Sandeep-Hipparagi/aegis-core)** | MCP Security Enclave | Zero-trust policy enclave, schema validator & DPDP Act PII sanitizer | [GitHub](https://github.com/Sandeep-Hipparagi/aegis-core) |
+| **aware.ai** | Adaptive Inference | Dual-plane local-first inference gateway with self-healing state loops | *private · client work* |
+| **Universal AI Switchboard** | Orchestration | Graph-driven MCP switchboard with Human-in-the-Loop gates | *private · client work* |
+| **Autonomous QA Agent** | Self-Healing QA | Multi-agent autonomous web testing lifecycle (Planner, Generator, Healer) | *private · client work* |
+| **NyayaRakshak** | Legal-Tech Compliance | Sarvam AI citizen complaint auditor mapped to BNS 2023 | *private · client work* |
+| **CyberGuard 1930** | Fraud Defense | Voice-first Indic financial fraud reporting portal | *private · client work* |
+| **A3H Harness** | Reliability & Evals | Benchmark harness measuring prompt resilience and schema compliance | *private · client work* |
 
 ---
 
-## 💼 Professional Experience
+## Open-Source Models
 
-#### **BluePatterns AI** — *AI/ML Developer & Founder*
-*Bengaluru, India • April 2025 – Present*
-- Architected and deployed **aware.ai**, an adaptive multi-agent inference layer featuring automated exception fallback logic and self-healing state-recovery loops for enterprise workflows.
-- Built long-running agent execution pipelines using **OpenClaw** and **LangGraph** capable of multi-step autonomous reasoning and scheduled background execution.
-- Designed strict, idempotent JSON schemas and tool definitions for agent tool-calling, enabling safe third-party SaaS integrations and enterprise multi-tenancy controls.
-- Engineered pre-deployment evaluation pipelines to measure prompt resilience, structural output drift, and agent logic stability with safe rollback capabilities.
-
-#### **Tata Consultancy Services (TCS)** — *Senior System Engineer*
-*Bengaluru, India • Dec 2022 – May 2025*
-- Built and maintained enterprise-grade Python microservices, data pipelines, and transactional layers using PostgreSQL and Redis under mission-critical SLAs.
-- Engineered secure third-party API connector frameworks managing OAuth flows, high-concurrency rate limiting, and defensive data validation mechanisms.
-- Managed production observability (SigNoz, Datadog), driving down API latency through automated query optimization, strategic database indexing, and retry semantics.
-- Refactored legacy batch architectures into robust state-managed workflows, minimizing transactional failure rates during unexpected downtime.
-
-#### **National Institute of Technology (NIT), Tiruchirappalli** — *Engineer Intern*
-*Tiruchirappalli, India • 2020 – 2021*
-- Conducted foundational engineering research and collaborated on machine learning problem-solving within applied academic and computational frameworks.
+| Model | Base / Stack | Downloads | Release |
+| :--- | :--- | :--- | :--- |
+| **llama3-8b-Wisdom** | Llama-3 8B · Unsloth QLoRA · GGUF | 83 | [Hugging Face](https://huggingface.co/Sandeep4235/llama3-8b-Wisdom-gguf) |
+| **Qwen3-4B-PromptCraft** | Qwen3-4B · Unsloth QLoRA · GGUF | 41 | [Hugging Face](https://huggingface.co/Sandeep4235/Qwen3-4B-PromptCraft-GGUF) |
+| **llama3-2-lora-wisdom** | Llama-3.2 3B · Unsloth QLoRA | 23 | [Hugging Face](https://huggingface.co/Sandeep4235/llama3-2-lora-wisdom) |
+| **qwen2.5-7b-adapter** | Qwen2.5 7B · Alpaca-Cleaned LoRA | 0 | [Hugging Face](https://huggingface.co/Sandeep4235/qwen2.5-7b-adapter) |
 
 ---
 
-## 🔬 Research & Academic Background
+## Professional Experience & Research
 
-- **IEEE Published Research**:
-  - *Artist Based Video Recommendation System using Machine Learning*
-- **Active Research Interests**:
-  - Mitigating information inequality in widespread AI adoption
-  - Developing localization and vernacular reasoning frameworks for open-weight LLMs
-  - Multi-agent coordination paradigms, self-healing state graphs, and Human-in-the-Loop verification
-- **Education**:
-  - **Master's Degree** — Amrita Vishwa Vidyapeetham, Coimbatore
-  - **Bachelor's Degree** — KLE Institute of Technology, Hubli
-
----
-
-## 📜 Certifications & Credentials
-
-- 🏅 **Google AI Essentials** — Coursera *(Aug 2024)*
-- 🏅 **Introduction to Prompt Engineering for Generative AI** — LinkedIn *(Jul 2024)*
-- 🏅 **Databases and SQL for Data Science with Python (with Honors)** — IBM *(Jan 2023)*
-- 🏅 **ETL: Extract, Transform and Load Data** — CertNexus *(Jun 2022)*
-- 🏅 **AWS Machine Learning** — Coursera *(May 2021)*
-- 🏅 **Machine Learning (Stanford University)** — Coursera *(Apr 2021)*
-
-Verify credentials on [Credly](https://www.credly.com/users/sandeep-sukumar-hipparagi) • Coding profile on [HackerRank](https://www.hackerrank.com/sandeeph1537).
-
----
-
-## 📊 GitHub Analytics
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Sandeep-Hipparagi&show_icons=true&theme=radical&rank_icon=github" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sandeep-Hipparagi&layout=compact&theme=radical" alt="Top Languages" />
-</p>
+- **BluePatterns AI** — *AI/ML Developer & Founder* (Apr 2025 – Present) · Multi-agent inference runtimes, self-healing state graphs, enterprise LLM evals.
+- **Tata Consultancy Services (TCS)** — *Senior System Engineer* (Dec 2022 – May 2025) · Enterprise Python microservices, PostgreSQL/Redis transaction pipelines.
+- **NIT Tiruchirappalli** — *Engineer Intern* (2020 – 2021) · Applied machine learning and computational research.
+- **IEEE Published Research**: [*Artist Based Video Recommendation System using Machine Learning*](https://ieeexplore.ieee.org/document/9572793) (ICIRCA 2021).
 
 ---
 
@@ -166,11 +89,5 @@ Verify credentials on [Credly](https://www.credly.com/users/sandeep-sukumar-hipp
 ---
 
 <div align="center">
-
-<sub>Crafting AI systems that are reliable, trustworthy, transparent, and production-ready.</sub>
-
-<br />
-
-**[BluePatterns AI](https://bluepatterns.ai/)** • **[LinkedIn](https://linkedin.com/in/sandeephipparagi)** • **[GitHub](https://github.com/Sandeep-Hipparagi)** • **[Hugging Face](https://huggingface.co/Sandeep4235)**
-
+<sub>made with <a href="https://github.com/latent-spaces/brag">/brag</a> · inspired by the <a href="https://latent-spaces.github.io/brag/">/brag launch site</a></sub>
 </div>
