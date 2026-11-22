@@ -1,8 +1,8 @@
 <div align="center">
 
 # Sandeep Hipparagi
-### AI/ML Developer · Researcher · Founder, BluePatterns AI
-### Multi-Agent Systems · Self-Healing Architectures · Production LLM Infrastructure
+### AI Systems Architect · Founder, BluePatterns AI
+### Deterministic Control Planes · Provenance & Security Enclaves · Inference Routing · Full-Stack AI
 
 <p align="center">
   <a href="https://bluepatterns.ai/"><img src="https://img.shields.io/badge/BluePatterns%20AI-007ACC?style=for-the-badge&logo=google-chrome&logoColor=white" alt="BluePatterns AI" /></a>
@@ -20,7 +20,45 @@
 
 > *"The real advantage in AI is not just the model. It is the architecture around it."*
 
-I design and build the systems behind production-grade AI — the routing, state persistence, orchestration, evaluation, and guardrail layers that transform experimental intelligence into dependable software for real users.
+I build the **deterministic layer around probabilistic models**: context firewalls that measure signal-to-noise, provenance enclaves that verify before trusting, routers that allocate reasoning like a budget, and zero-trust policy gates that fail closed — every claim in this portfolio backed by tests, strict type checking, and CI-enforced reproducible benchmarks.
+
+---
+
+## Architecture & Ecosystem Map
+
+The flagship stack composes into one governed inference pipeline:
+
+```mermaid
+flowchart LR
+    A["agent-snr\nSignal Firewall\n(SNR scoring, loop & drift detection)"] --> C["context-guard\nState-Ledger Compression\n(health scoring, OpenAI-compatible proxy)"]
+    C --> R["Inference-Pareto-Router\n2D Model Tier × Reasoning Effort\n(sub-ms deterministic routing)"]
+    R --> G["aegis-core\nZero-Trust Policy Enclave\n(schema validation, WORM audit, HITL)"]
+    G --> P["provenance-guard\n(epistemic-guard)\nDeterministic Source Tiering\n(Tier 1-5 accountability)"]
+    G --> N["NexusGraph\nFalkorDB Graph Brain\n(tenant isolation, MCP tooling, traces)"]
+    A & C & R & G & P --> B["agent-benchmark-suite\nUnified Evaluator\n(SHA-256-digested workloads,\nCI-enforced leaderboards)"]
+    N --> B
+    S["cybersaarthi\nFull-Stack Reference App\n(Cloudflare Workers + D1 voice intake)"] -.reference deployment.-> G
+```
+
+Every infrastructure layer is measured by [`agent-benchmark-suite`](https://github.com/Sandeep-Hipparagi/agent-benchmark-suite): seeded workloads, SHA-256 digests, and leaderboards that CI re-verifies at ≤ 3% drift.
+
+---
+
+## Flagship Systems Matrix
+
+| Repository | Domain | Key engineering / security invariant | Verification status |
+| :--- | :--- | :--- | :--- |
+| **[agent-snr](https://github.com/Sandeep-Hipparagi/agent-snr)** · PyPI | Agentic context firewall | SNR-scored pruning; loop-entropy & goal-drift circuit breakers; zero-dep decision path | 108/108 tests · mypy strict · 163 fuzz probes, 0 crashes |
+| **[context-guard](https://github.com/Sandeep-Hipparagi/context-guard)** · PyPI | Context compression proxy | State-ledger compression; credential-free CORS; non-root containers | 41/41 tests · ruff + format clean |
+| **[Inference-Pareto-Router](https://github.com/Sandeep-Hipparagi/Inference-Pareto-Router)** · PyPI | Inference routing | 2D `(tier, effort)` frontier; no network in decision path | 48/48 tests · mypy `--strict` · 214 fuzz probes, 0 crashes |
+| **[aegis-core](https://github.com/Sandeep-Hipparagi/aegis-core)** | Zero-trust policy enclave | Fail-closed schema validation; WORM audit ledger; HITL gates; non-root containers | 73 TS + 15 Python tests · SEC-01…09 adversarial suite |
+| **[epistemic-guard](https://github.com/Sandeep-Hipparagi/epistemic-guard)** (`provenance-guard` on PyPI) | Provenance verification | Deterministic Tier 1–5 source accountability; zero-hallucination `DO_NOT_SHARE_UNCONFIRMED` invariant | 89/89 tests · MCP 1.x/2.x dual support |
+| **[NexusGraph](https://github.com/Sandeep-Hipparagi/NexusGraph)** | Graph memory & multi-agent state | Tenant-isolated FalkorDB graphs; injection-hardened identifiers; digest-pinned CI | 38/38 tests incl. live-FalkorDB integration |
+| **[agent-benchmark-suite](https://github.com/Sandeep-Hipparagi/agent-benchmark-suite)** | Unified evaluation | SHA-256 workload digests; CI drift gate ≤ 3%; byte-stable leaderboards | 85/85 tests · mypy strict · CI green |
+| **[cybersaarthi](https://github.com/Sandeep-Hipparagi/cybersaarthi)** | Full-stack AI application | Drizzle-parameterized D1 persistence; WebCrypto-signed sessions; contract-verified 15↔19 API map | 20/20 tests · eslint + tsc clean · 0 prod CVEs |
+| **[Skipper-UI](https://github.com/Sandeep-Hipparagi/Skipper-UI)** | Motion component registry | 107 clean-room primitives; 100% local digest-verified assets | typecheck + build + asset chain green · 0 prod CVEs |
+
+**Packages:** [`agent-snr`](https://pypi.org/project/agent-snr/) · [`provenance-guard`](https://pypi.org/project/provenance-guard/) · [`pareto-router`](https://pypi.org/project/pareto-router/) · [`context-guards`](https://pypi.org/project/context-guards/) — **Models:** [Hugging Face `Sandeep4235`](https://huggingface.co/Sandeep4235) — **Company:** [bluepatterns.ai](https://bluepatterns.ai/)
 
 ---
 
@@ -31,29 +69,11 @@ I design and build the systems behind production-grade AI — the routing, state
 <tbody>
 <tr><td>Experimental Prompts</td><td>→</td><td>Deterministic Multi-Agent State Routing</td></tr>
 <tr><td>Brittle Reasoning Flows</td><td>→</td><td>Self-Healing Loops &amp; Fallback Runtimes</td></tr>
-<tr><td>Undefined Vulnerabilities</td><td>→</td><td>OWASP LLM Guardrails &amp; PII Gateways</td></tr>
-<tr><td>Black-box Executions</td><td>→</td><td>Auditable Human-in-the-Loop (HITL) Checkpoints</td></tr>
-<tr><td>Single Demos</td><td>→</td><td>Scalable, Containerized Microservices</td></tr>
+<tr><td>Undefined Vulnerabilities</td><td>→</td><td>Zero-Trust Guardrails &amp; Provenance Enclaves</td></tr>
+<tr><td>Black-box Executions</td><td>→</td><td>WORM-Auditable, HITL-Checkpointed Decisions</td></tr>
+<tr><td>Unverified Benchmarks</td><td>→</td><td>CI-Enforced, Digest-Pinned Leaderboards</td></tr>
 </tbody>
 </table>
-
----
-
-## Flagship Systems
-
-| Project | Focus | Description / Outcome | Link |
-| :--- | :--- | :--- | :--- |
-| **[SLNG-AI](https://github.com/Sandeep-Hipparagi/SLNG-AI)** | Indic Voice Agent | Sovereign Indic Triage & Compliance Voice Agent with Gemini 2.5 Flash | [GitHub](https://github.com/Sandeep-Hipparagi/SLNG-AI) |
-| **[NexusGraph](https://github.com/Sandeep-Hipparagi/NexusGraph)** | Connected Graph Brain | FalkorDB-native graph traversal, traces, and FastMCP tooling | [GitHub](https://github.com/Sandeep-Hipparagi/NexusGraph) |
-| **[Griffin-R](https://github.com/Sandeep-Hipparagi/Griffin-R)** | Interviewer Dashboard | Tavus CVI + LiveKit real-time interviewer with Pydantic validation | [GitHub](https://github.com/Sandeep-Hipparagi/Griffin-R) |
-| **[Inference-Pareto-Router](https://github.com/Sandeep-Hipparagi/Inference-Pareto-Router)** | LLM Routing Engine | 2D Model Tier & Reasoning Effort Routing Engine | [GitHub](https://github.com/Sandeep-Hipparagi/Inference-Pareto-Router) |
-| **[aegis-core](https://github.com/Sandeep-Hipparagi/aegis-core)** | MCP Security Enclave | Zero-trust policy enclave, schema validator & DPDP Act PII sanitizer | [GitHub](https://github.com/Sandeep-Hipparagi/aegis-core) |
-| **aware.ai** | Adaptive Inference | Dual-plane local-first inference gateway with self-healing state loops | *private · client work* |
-| **Universal AI Switchboard** | Orchestration | Graph-driven MCP switchboard with Human-in-the-Loop gates | *private · client work* |
-| **Autonomous QA Agent** | Self-Healing QA | Multi-agent autonomous web testing lifecycle (Planner, Generator, Healer) | *private · client work* |
-| **NyayaRakshak** | Legal-Tech Compliance | Sarvam AI citizen complaint auditor mapped to BNS 2023 | *private · client work* |
-| **CyberGuard 1930** | Fraud Defense | Voice-first Indic financial fraud reporting portal | *private · client work* |
-| **A3H Harness** | Reliability & Evals | Benchmark harness measuring prompt resilience and schema compliance | *private · client work* |
 
 ---
 
@@ -77,9 +97,8 @@ I design and build the systems behind production-grade AI — the routing, state
 
 ---
 
-## 🤝 Open For Collaboration
+## Collaboration
 
-- 🏛️ **Academic & Faculty Roles**: Department of Computer Science & Engineering / AI & Data Science
-- 🧩 **Enterprise AI Architecture**: Multi-agent system orchestration, local-first inference, and production deployment
-- 🛡️ **AI Safety & Evals**: LLM guardrail implementation, benchmark harness design, and self-healing state graphs
-- 🌐 **Domain Specializations**: Legal-tech AI (Indic/BNS compliance), cyber fraud defense, and personalized educational systems
+- **Enterprise AI Architecture**: multi-agent orchestration, local-first inference, and production deployment.
+- **AI Safety & Evals**: guardrail implementation, provenance enclaves, benchmark harness design.
+- **Domain Systems**: legal-tech AI (Indic/BNS compliance), cyber fraud defense, voice-first citizen services.
