@@ -35,6 +35,7 @@ flowchart LR
     R --> G["aegis-core\nZero-Trust Policy Enclave\n(schema validation, WORM audit, HITL)"]
     G --> P["provenance-guard\n(epistemic-guard)\nDeterministic Source Tiering\n(Tier 1-5 accountability)"]
     G --> N["NexusGraph\nFalkorDB Graph Brain\n(tenant isolation, MCP tooling, traces)"]
+    G --> SM["sentinel-mcp\nRegistry-Ready MCP Server\n(verify → authorize → execute → audit)"]
     A & C & R & G & P --> B["agent-benchmark-suite\nUnified Evaluator\n(SHA-256-digested workloads,\nCI-enforced leaderboards)"]
     N --> B
     S["cybersaarthi\nFull-Stack Reference App\n(Cloudflare Workers + D1 voice intake)"] -.reference deployment.-> G
@@ -54,7 +55,8 @@ Every infrastructure layer is measured by [`agent-benchmark-suite`](https://gith
 | **[aegis-core](https://github.com/Sandeep-Hipparagi/aegis-core)** | Zero-trust policy enclave | Fail-closed schema validation; WORM audit ledger; HITL gates; non-root containers | 73 TS + 15 Python tests · SEC-01…09 adversarial suite |
 | **[epistemic-guard](https://github.com/Sandeep-Hipparagi/epistemic-guard)** (`provenance-guard` on PyPI) | Provenance verification | Deterministic Tier 1–5 source accountability; zero-hallucination `DO_NOT_SHARE_UNCONFIRMED` invariant | 89/89 tests · MCP 1.x/2.x dual support |
 | **[NexusGraph](https://github.com/Sandeep-Hipparagi/NexusGraph)** | Graph memory & multi-agent state | Tenant-isolated FalkorDB graphs; injection-hardened identifiers; digest-pinned CI | 38/38 tests incl. live-FalkorDB integration |
-| **[agent-benchmark-suite](https://github.com/Sandeep-Hipparagi/agent-benchmark-suite)** | Unified evaluation | SHA-256 workload digests; CI drift gate ≤ 3%; byte-stable leaderboards | 85/85 tests · mypy strict · CI green |
+| **[agent-benchmark-suite](https://github.com/Sandeep-Hipparagi/agent-benchmark-suite)** | Unified evaluation | SHA-256 workload digests; CI drift gate ≤ 3%; byte-stable leaderboards; **native mode executes the real flagship libraries** (aegis-core compiled dist via Node, in-process Python adapters) | 85/85 tests · mypy strict · CI green |
+| **[sentinel-mcp](https://github.com/Sandeep-Hipparagi/sentinel-mcp)** | Registry-ready MCP server | Merkle-chained WORM audit (100% tamper detection); fail-closed policy gate; FalkorDB→SQLite fallback | 76/76 tests · 12/12 conformance · p95 0.014 ms · CI green |
 | **[cybersaarthi](https://github.com/Sandeep-Hipparagi/cybersaarthi)** | Full-stack AI application | Drizzle-parameterized D1 persistence; WebCrypto-signed sessions; contract-verified 15↔19 API map | 20/20 tests · eslint + tsc clean · 0 prod CVEs |
 | **[Skipper-UI](https://github.com/Sandeep-Hipparagi/Skipper-UI)** | Motion component registry | 107 clean-room primitives; 100% local digest-verified assets | typecheck + build + asset chain green · 0 prod CVEs |
 
