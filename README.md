@@ -104,3 +104,51 @@ Every infrastructure layer is measured by [`agent-benchmark-suite`](https://gith
 - **Enterprise AI Architecture**: multi-agent orchestration, local-first inference, and production deployment.
 - **AI Safety & Evals**: guardrail implementation, provenance enclaves, benchmark harness design.
 - **Domain Systems**: legal-tech AI (Indic/BNS compliance), cyber fraud defense, voice-first citizen services.
+
+---
+
+## 📦 Published Packages
+
+### npm (GitHub Packages)
+```bash
+# Configure registry
+npm config set @sandeep-hipparagi:registry https://npm.pkg.github.com
+
+# Install packages
+npm install @sandeep-hipparagi/aegis-core@0.1.3
+npm install @sandeep-hipparagi/aegis-sdk@0.1.3
+npm install @sandeep-hipparagi/skipper-ui@1.0.1
+npm install @sandeep-hipparagi/gemini-minecraft-agent-harness@0.1.0
+```
+
+### Docker (GHCR)
+```bash
+# All images public — no auth needed
+docker pull ghcr.io/sandeep-hipparagi/aegis-core:0.1.3
+docker pull ghcr.io/sandeep-hipparagi/agent-benchmark-suite:0.1.0
+docker pull ghcr.io/sandeep-hipparagi/sentinel-mcp:0.1.1
+docker pull ghcr.io/sandeep-hipparagi/agent-snr:0.1.1
+docker pull ghcr.io/sandeep-hipparagi/context-guard:0.1.0
+docker pull ghcr.io/sandeep-hipparagi/provenance-guard:0.2.2
+docker pull ghcr.io/sandeep-hipparagi/pareto-router:0.1.2
+docker pull ghcr.io/sandeep-hipparagi/nexusgraph:1.0.0
+```
+
+### Package Details
+
+| Package | Registry | Version | Description |
+|---------|----------|---------|-------------|
+| `@sandeep-hipparagi/aegis-core` | npm | 0.1.3 | Zero-trust policy enclave for AI agents |
+| `@sandeep-hipparagi/aegis-sdk` | npm | 0.1.3 | Lightweight client SDK for AegisCore |
+| `@sandeep-hipparagi/skipper-ui` | npm | 1.0.1 | 107 production-grade motion primitives |
+| `@sandeep-hipparagi/gemini-minecraft-agent-harness` | npm | 0.1.0 | Autonomous Minecraft agent harness |
+| `ghcr.io/sandeep-hipparagi/aegis-core` | Docker | 0.1.3 | AegisCore MCP server |
+| `ghcr.io/sandeep-hipparagi/agent-benchmark-suite` | Docker | 0.1.0 | Agent benchmark CLI |
+| `ghcr.io/sandeep-hipparagi/sentinel-mcp` | Docker | 0.1.1 | MCP server for claim verification |
+| `ghcr.io/sandeep-hipparagi/agent-snr` | Docker | 0.1.1 | L4/L5 Signal Firewall for AI agents |
+| `ghcr.io/sandeep-hipparagi/context-guard` | Docker | 0.1.0 | Dual-layer context health guardrail |
+| `ghcr.io/sandeep-hipparagi/provenance-guard` | Docker | 0.2.2 | Provenance auditing engine |
+| `ghcr.io/sandeep-hipparagi/pareto-router` | Docker | 0.1.2 | Sub-millisecond LLM router |
+| `ghcr.io/sandeep-hipparagi/nexusgraph` | Docker | 1.0.0 | Multi-agent incident intelligence |
+
+All packages include OCI labels for automatic repository linking in GitHub Packages sidebar.
