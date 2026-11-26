@@ -16,6 +16,12 @@
 
 </div>
 
+## Master Portfolio Launch Reel
+
+https://github.com/Sandeep-Hipparagi/Sandeep-Hipparagi/releases/download/media-v1/brag.mp4
+
+[![Master Portfolio Reel](assets/media/preview.webp)](https://github.com/Sandeep-Hipparagi/Sandeep-Hipparagi/releases/tag/media-v1)
+
 ---
 
 > *"The real advantage in AI is not just the model. It is the architecture around it."*
